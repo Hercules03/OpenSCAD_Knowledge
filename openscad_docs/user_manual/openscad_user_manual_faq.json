@@ -1,0 +1,1833 @@
+{
+  "title": "OpenSCAD User Manual/FAQ",
+  "url": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ#Why_are_some_parts_(e.g._holes)_of_the_model_not_rendered_correctly?",
+  "sections": [
+    {
+      "title": "How is OpenSCAD pronounced?",
+      "id": "How_is_OpenSCAD_pronounced?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "What is the meaning of the S in OpenSCAD?",
+      "id": "What_is_the_meaning_of_the_S_in_OpenSCAD?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Using OpenSCAD for Windows in VM's or via Remote desktop (Windows RDP or Linux XfreeRDP etc)",
+      "id": "Using_OpenSCAD_for_Windows_in_VM's_or_via_Remote_desktop_(Windows_RDP_or_Linux_XfreeRDP_etc)",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Preview doesn't appear to work at all",
+      "id": "Preview_doesn't_appear_to_work_at_all",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "What are those strange flickering artifacts in the preview?",
+      "id": "What_are_those_strange_flickering_artifacts_in_the_preview?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why are some parts (e.g. holes) of the model not rendered correctly?",
+      "id": "Why_are_some_parts_(e.g._holes)_of_the_model_not_rendered_correctly?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why does difference (or intersection) sometimes not work in preview?",
+      "id": "Why_does_difference_(or_intersection)_sometimes_not_work_in_preview?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why is my model appearing with F5 but not F6?",
+      "id": "Why_is_my_model_appearing_with_F5_but_not_F6?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why is the preview so slow?",
+      "id": "Why_is_the_preview_so_slow?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why is my imported STL file appearing with F5 but not F6?",
+      "id": "Why_is_my_imported_STL_file_appearing_with_F5_but_not_F6?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "I'm getting \"Unsupported DXF Entity\" warnings when importing DXF files. What does that mean?",
+      "id": "I'm_getting_\"Unsupported_DXF_Entity\"_warnings_when_importing_DXF_files._What_does_that_mean?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "How can I export multiple parts from one script?",
+      "id": "How_can_I_export_multiple_parts_from_one_script?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "How can I export screenshots with higher resolution than the current window",
+      "id": "How_can_I_export_screenshots_with_higher_resolution_than_the_current_window",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why am I getting an error when writing a = a + 1?",
+      "id": "Why_am_I_getting_an_error_when_writing_a_=_a_+_1?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=19"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=19"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenSCAD isn't adhering to my GTK desktop theme",
+      "id": "OpenSCAD_isn't_adhering_to_my_GTK_desktop_theme",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=21"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=21"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenSCAD GUI is not scaled in Gnome on a 4K / HIDPI Monitor",
+      "id": "OpenSCAD_GUI_is_not_scaled_in_Gnome_on_a_4K_/_HIDPI_Monitor",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=22"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=22"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "I'm not getting any menubar when running OpenSCAD in Ubuntu, how can I get it back?",
+      "id": "I'm_not_getting_any_menubar_when_running_OpenSCAD_in_Ubuntu,_how_can_I_get_it_back?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=23"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=23"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why are the error line numbers wrong?",
+      "id": "Why_are_the_error_line_numbers_wrong?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=24"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=24"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "I don't like the editor, can I use my favourite editor instead?",
+      "id": "I_don't_like_the_editor,_can_I_use_my_favourite_editor_instead?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=25"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=25"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Why am I getting \"no top level geometry to render\"?",
+      "id": "Why_am_I_getting_\"no_top_level_geometry_to_render\"?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=27"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=27"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenSCAD crashed/was killed, are my unsaved changes lost?",
+      "id": "OpenSCAD_crashed/was_killed,_are_my_unsaved_changes_lost?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=28"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=28"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenSCAD crashes when clicking \"New\" or loading a file on Windows",
+      "id": "OpenSCAD_crashes_when_clicking_\"New\"_or_loading_a_file_on_Windows",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=29"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=29"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenSCAD fails to run refering to EVR.dll, MF.dll or MFPlat.dll on Windows",
+      "id": "OpenSCAD_fails_to_run_refering_to_EVR.dll,_MF.dll_or_MFPlat.dll_on_Windows",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=30"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=30"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "How do I report bugs?",
+      "id": "How_do_I_report_bugs?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=32"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=32"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "How do I request new features?",
+      "id": "How_do_I_request_new_features?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=33"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=33"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "How do I report bugs that are related to the Operating System I use?",
+      "id": "How_do_I_report_bugs_that_are_related_to_the_Operating_System_I_use?",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=34"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=34"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Windows",
+      "id": "Windows",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=35"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=35"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Mac OS X",
+      "id": "Mac_OS_X",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=36"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=36"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Linux",
+      "id": "Linux",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&veaction=edit&section=37"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/FAQ&action=edit&section=37"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

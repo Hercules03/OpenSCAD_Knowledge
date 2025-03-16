@@ -1,0 +1,1707 @@
+{
+  "title": "OpenSCAD User Manual/Building on Linux/UNIX",
+  "url": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Linux/UNIX",
+  "sections": [
+    {
+      "title": "Prebuilt binary packages",
+      "id": "Prebuilt_binary_packages",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "generic linux binary package",
+      "id": "generic_linux_binary_package",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "nightly builds",
+      "id": "nightly_builds",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "chrysn's Ubuntu packages",
+      "id": "chrysn's_Ubuntu_packages",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Building OpenSCAD yourself",
+      "id": "Building_OpenSCAD_yourself",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Installing dependencies",
+      "id": "Installing_dependencies",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Prepackaged dependencies",
+      "id": "Prepackaged_dependencies",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Verifying dependencies",
+      "id": "Verifying_dependencies",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Building the dependencies yourself",
+      "id": "Building_the_dependencies_yourself",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Build the OpenSCAD binary",
+      "id": "Build_the_OpenSCAD_binary",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Experimental",
+      "id": "Experimental",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Compiling the test suite",
+      "id": "Compiling_the_test_suite",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Troubleshooting",
+      "id": "Troubleshooting",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Errors about incompatible library versions",
+      "id": "Errors_about_incompatible_library_versions",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenCSG didn't automatically build",
+      "id": "OpenCSG_didn't_automatically_build",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "CGAL didn't automatically build",
+      "id": "CGAL_didn't_automatically_build",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Compiling fails with an Internal compiler error from GCC or GAS",
+      "id": "Compiling_fails_with_an_Internal_compiler_error_from_GCC_or_GAS",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Compiling is horribly slow and/or grinds the disk",
+      "id": "Compiling_is_horribly_slow_and/or_grinds_the_disk",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=18"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=18"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "BSD issues",
+      "id": "BSD_issues",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=19"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=19"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Sun / Solaris / IllumOS / AIX / IRIX / Minix / etc",
+      "id": "Sun_/_Solaris_/_IllumOS_/_AIX_/_IRIX_/_Minix_/_etc",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=20"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=20"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Test suite problems",
+      "id": "Test_suite_problems",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=21"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=21"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "I moved the dependencies I built and now openscad won't run",
+      "id": "I_moved_the_dependencies_I_built_and_now_openscad_won't_run",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=22"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=22"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Tricks and tips",
+      "id": "Tricks_and_tips",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=23"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=23"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Reduce space of dependency build",
+      "id": "Reduce_space_of_dependency_build",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=24"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=24"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Preferences",
+      "id": "Preferences",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=25"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=25"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Setup environment to start developing OpenSCAD in Ubuntu 11.04",
+      "id": "Setup_environment_to_start_developing_OpenSCAD_in_Ubuntu_11.04",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=26"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=26"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "The Clang Compiler",
+      "id": "The_Clang_Compiler",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&veaction=edit&section=27"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Linux/UNIX&action=edit&section=27"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

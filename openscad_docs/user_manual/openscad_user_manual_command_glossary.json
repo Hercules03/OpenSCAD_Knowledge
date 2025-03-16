@@ -1,0 +1,1014 @@
+{
+  "title": "OpenSCAD User Manual/Command Glossary",
+  "url": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Command_Glossary",
+  "sections": [
+    {
+      "title": "Mathematical Operators",
+      "id": "Mathematical_Operators",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Mathematical Functions",
+      "id": "Mathematical_Functions",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "String Functions",
+      "id": "String_Functions",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Primitive Solids",
+      "id": "Primitive_Solids",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Transformations",
+      "id": "Transformations",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Conditional and Iterator Functions",
+      "id": "Conditional_and_Iterator_Functions",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "CSG Modelling",
+      "id": "CSG_Modelling",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Modifier Characters",
+      "id": "Modifier_Characters",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Modules",
+      "id": "Modules",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Include Statement",
+      "id": "Include_Statement",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Other Language Features",
+      "id": "Other_Language_Features",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "2D Primitives",
+      "id": "2D_Primitives",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "3D to 2D Projection",
+      "id": "3D_to_2D_Projection",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "2D to 3D Extrusion",
+      "id": "2D_to_3D_Extrusion",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "DXF Extrusion",
+      "id": "DXF_Extrusion",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "STL Import",
+      "id": "STL_Import",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&veaction=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Command_Glossary&action=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

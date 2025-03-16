@@ -1,0 +1,1077 @@
+{
+  "title": "OpenSCAD User Manual/Building on Microsoft Windows",
+  "url": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Microsoft_Windows",
+  "sections": [
+    {
+      "title": "Set up tools and dependencies",
+      "id": "Set_up_tools_and_dependencies",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Install OpenSCAD build dependencies",
+      "id": "Install_OpenSCAD_build_dependencies",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Set up source directory",
+      "id": "Set_up_source_directory",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Build with command line",
+      "id": "Build_with_command_line",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Set up build directory",
+      "id": "Set_up_build_directory",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Build",
+      "id": "Build",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Run",
+      "id": "Run",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Build with Qt Creator IDE",
+      "id": "Build_with_Qt_Creator_IDE",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=8"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Install QT Creator",
+      "id": "Install_QT_Creator",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=9"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Load project",
+      "id": "Load_project",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=10"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Build",
+      "id": "Build_2",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=11"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "32-bit support",
+      "id": "32-bit_support",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=12"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Prebuilt OpenSCAD",
+      "id": "Prebuilt_OpenSCAD",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=13"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Historical Notes",
+      "id": "Historical_Notes",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=14"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "QtCreator",
+      "id": "QtCreator",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=15"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Building Debug Version",
+      "id": "Building_Debug_Version",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=16"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "OpenGL (Optional)",
+      "id": "OpenGL_(Optional)",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&veaction=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/Building_on_Microsoft_Windows&action=edit&section=17"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

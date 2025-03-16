@@ -1,0 +1,2847 @@
+{
+  "title": "OpenSCAD Cheat Sheet",
+  "url": "https://openscad.org/cheatsheet/",
+  "sections": [
+    {
+      "title": "v2021.01",
+      "content": [],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Syntax",
+      "content": [
+        {
+          "tag": "code",
+          "text": "var=value;",
+          "children": [
+            {
+              "tag": "a",
+              "text": "var",
+              "children": [
+                "var"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+            },
+            "=",
+            {
+              "tag": "a",
+              "text": "value",
+              "children": [
+                "value"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types"
+            },
+            ";"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "var= cond?value_if_true:value_if_false;",
+          "children": [
+            {
+              "tag": "a",
+              "text": "var",
+              "children": [
+                "var"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+            },
+            "= cond",
+            {
+              "tag": "a",
+              "text": "?",
+              "children": [
+                "?"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:"
+            },
+            "value_if_true",
+            {
+              "tag": "a",
+              "text": ":",
+              "children": [
+                ":"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:"
+            },
+            "value_if_false;"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "var=function(x) x + x;",
+          "children": [
+            {
+              "tag": "a",
+              "text": "var",
+              "children": [
+                "var"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+            },
+            "=",
+            {
+              "tag": "a",
+              "text": "function",
+              "children": [
+                "function"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals"
+            },
+            "(x) x + x;"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "modulename(…) { … }name();",
+          "children": [
+            {
+              "tag": "a",
+              "text": "module",
+              "children": [
+                "module"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules"
+            },
+            "name(…) { … }",
+            "name();"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "functionname(…) = …name();",
+          "children": [
+            {
+              "tag": "a",
+              "text": "function",
+              "children": [
+                "function"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions"
+            },
+            "name(…) = …",
+            "name();"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "include<….scad>",
+          "children": [
+            {
+              "tag": "a",
+              "text": "include",
+              "children": [
+                "include"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement"
+            },
+            "<….scad>"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "use<….scad>",
+          "children": [
+            {
+              "tag": "a",
+              "text": "use",
+              "children": [
+                "use"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement"
+            },
+            "<….scad>"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Constants",
+      "content": [
+        {
+          "tag": "dl",
+          "text": "undefundefined valuePImathematical constantπ(~3.14159)",
+          "children": [
+            {
+              "tag": "dt",
+              "text": "undef",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "undef",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "undef",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#The_Undefined_Value"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "undefined value",
+              "children": [
+                "undefined value"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "PI",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "PI",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "PI",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Numbers"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "mathematical constantπ(~3.14159)",
+              "children": [
+                "mathematical constant",
+                {
+                  "tag": "a",
+                  "text": "π",
+                  "children": [
+                    "π"
+                  ],
+                  "href": "https://en.wikipedia.org/wiki/Pi"
+                },
+                "(~3.14159)"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "undef",
+          "type": "inline"
+        },
+        {
+          "code": "PI",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "Operators",
+      "content": [
+        {
+          "tag": "dl",
+          "text": "n + mAdditionn - mSubtractionn * mMultiplicationn / mDivisionn % mModulon ^ mExponentiationn < mLess Thann <= mLess or Equalb == cEqualb != cNot Equaln >= mGreater or Equaln > mGreater Thanb && cLogical Andb || cLogical Or!bNegation",
+          "children": [
+            {
+              "tag": "dt",
+              "text": "n + m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n + m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n + m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Addition",
+              "children": [
+                "Addition"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n - m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n - m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n - m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Subtraction",
+              "children": [
+                "Subtraction"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n * m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n * m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n * m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Multiplication",
+              "children": [
+                "Multiplication"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n / m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n / m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n / m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Division",
+              "children": [
+                "Division"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n % m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n % m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n % m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Modulo",
+              "children": [
+                "Modulo"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n ^ m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n ^ m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n ^ m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Exponentiation",
+              "children": [
+                "Exponentiation"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n < m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n < m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n < m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Less Than",
+              "children": [
+                "Less Than"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n <= m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n <= m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n <= m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Less or Equal",
+              "children": [
+                "Less or Equal"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "b == c",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "b == c",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "b == c",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Equal",
+              "children": [
+                "Equal"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "b != c",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "b != c",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "b != c",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Not Equal",
+              "children": [
+                "Not Equal"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n >= m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n >= m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n >= m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Greater or Equal",
+              "children": [
+                "Greater or Equal"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "n > m",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "n > m",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "n > m",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Greater Than",
+              "children": [
+                "Greater Than"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "b && c",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "b && c",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "b && c",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Logical And",
+              "children": [
+                "Logical And"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "b || c",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "b || c",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "b || c",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Logical Or",
+              "children": [
+                "Logical Or"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "!b",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "!b",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "!b",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "Negation",
+              "children": [
+                "Negation"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "n + m",
+          "type": "inline"
+        },
+        {
+          "code": "n - m",
+          "type": "inline"
+        },
+        {
+          "code": "n * m",
+          "type": "inline"
+        },
+        {
+          "code": "n / m",
+          "type": "inline"
+        },
+        {
+          "code": "n % m",
+          "type": "inline"
+        },
+        {
+          "code": "n ^ m",
+          "type": "inline"
+        },
+        {
+          "code": "n < m",
+          "type": "inline"
+        },
+        {
+          "code": "n <= m",
+          "type": "inline"
+        },
+        {
+          "code": "b == c",
+          "type": "inline"
+        },
+        {
+          "code": "b != c",
+          "type": "inline"
+        },
+        {
+          "code": "n >= m",
+          "type": "inline"
+        },
+        {
+          "code": "n > m",
+          "type": "inline"
+        },
+        {
+          "code": "b && c",
+          "type": "inline"
+        },
+        {
+          "code": "b || c",
+          "type": "inline"
+        },
+        {
+          "code": "!b",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "Special variables",
+      "content": [
+        {
+          "tag": "dl",
+          "text": "$faminimum angle$fsminimum size$fnnumber of fragments$tanimation step$vprviewport rotation angles in degrees$vptviewport translation$vpdviewport camera distance$vpfviewport camera field of view$childrennumber of module children$previewtrue in F5 preview, false for F6",
+          "children": [
+            {
+              "tag": "dt",
+              "text": "$fa",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$fa",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$fa",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fa"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "minimum angle",
+              "children": [
+                "minimum angle"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$fs",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$fs",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$fs",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fs"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "minimum size",
+              "children": [
+                "minimum size"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$fn",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$fn",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$fn",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fn"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "number of fragments",
+              "children": [
+                "number of fragments"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$t",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$t",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$t",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$t"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "animation step",
+              "children": [
+                "animation step"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$vpr",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$vpr",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$vpr",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpr"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "viewport rotation angles in degrees",
+              "children": [
+                "viewport rotation angles in degrees"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$vpt",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$vpt",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$vpt",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpt"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "viewport translation",
+              "children": [
+                "viewport translation"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$vpd",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$vpd",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$vpd",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpd"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "viewport camera distance",
+              "children": [
+                "viewport camera distance"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$vpf",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$vpf",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$vpf",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpf"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "viewport camera field of view",
+              "children": [
+                "viewport camera field of view"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$children",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$children",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$children",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Children"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "number of module children",
+              "children": [
+                "number of module children"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "$preview",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "$preview",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "$preview",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$preview"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "true in F5 preview, false for F6",
+              "children": [
+                "true in F5 preview, false for F6"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "$fa",
+          "type": "inline"
+        },
+        {
+          "code": "$fs",
+          "type": "inline"
+        },
+        {
+          "code": "$fn",
+          "type": "inline"
+        },
+        {
+          "code": "$t",
+          "type": "inline"
+        },
+        {
+          "code": "$vpr",
+          "type": "inline"
+        },
+        {
+          "code": "$vpt",
+          "type": "inline"
+        },
+        {
+          "code": "$vpd",
+          "type": "inline"
+        },
+        {
+          "code": "$vpf",
+          "type": "inline"
+        },
+        {
+          "code": "$children",
+          "type": "inline"
+        },
+        {
+          "code": "$preview",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "Modifier Characters",
+      "content": [
+        {
+          "tag": "dl",
+          "text": "*disable!show only#highlight / debug%transparent / background",
+          "children": [
+            {
+              "tag": "dt",
+              "text": "*",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "*",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "*",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters#Disable_Modifier"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "disable",
+              "children": [
+                "disable"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "!",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "!",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "!",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters#Root_Modifier"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "show only",
+              "children": [
+                "show only"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "#",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "#",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "#",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters#Debug_Modifier"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "highlight / debug",
+              "children": [
+                "highlight / debug"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "%",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "%",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "%",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters#Background_Modifier"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "transparent / background",
+              "children": [
+                "transparent / background"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "*",
+          "type": "inline"
+        },
+        {
+          "code": "!",
+          "type": "inline"
+        },
+        {
+          "code": "#",
+          "type": "inline"
+        },
+        {
+          "code": "%",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "2D",
+      "content": [
+        {
+          "tag": "code",
+          "text": "circle(radius | d=diameter)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "circle",
+              "children": [
+                "circle"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#circle"
+            },
+            "(radius | d=diameter)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "square(size,center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "square",
+              "children": [
+                "square"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#square"
+            },
+            "(size,center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "square([width,height],center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "square",
+              "children": [
+                "square"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#square"
+            },
+            "([width,height],center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "polygon([points])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "polygon",
+              "children": [
+                "polygon"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#polygon"
+            },
+            "([points])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "polygon([points],[paths])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "polygon",
+              "children": [
+                "polygon"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#polygon"
+            },
+            "([points],[paths])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "text(t, size, font,halign, valign, spacing,direction, language, script)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "text",
+              "children": [
+                "text"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text"
+            },
+            "(t, size, font,",
+            "halign, valign, spacing,",
+            "direction, language, script)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "import(\"….extformats: DXF|SVG\", convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "import",
+              "children": [
+                "import"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Importing_Geometry#import"
+            },
+            "(\"….",
+            {
+              "tag": "span",
+              "text": "extformats: DXF|SVG",
+              "children": [
+                "ext",
+                {
+                  "tag": "span",
+                  "text": "formats: DXF|SVG",
+                  "children": [
+                    "formats: DXF|SVG"
+                  ]
+                }
+              ]
+            },
+            "\", convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "projection(cut)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "projection",
+              "children": [
+                "projection"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#3D_to_2D_Projection"
+            },
+            "(cut)"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "3D",
+      "content": [
+        {
+          "tag": "code",
+          "text": "sphere(radius | d=diameter)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "sphere",
+              "children": [
+                "sphere"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#sphere"
+            },
+            "(radius | d=diameter)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cube(size, center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cube",
+              "children": [
+                "cube"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cube"
+            },
+            "(size, center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cube([width,depth,height], center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cube",
+              "children": [
+                "cube"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cube"
+            },
+            "([width,depth,height], center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cylinder(h,r|d,center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cylinder",
+              "children": [
+                "cylinder"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder"
+            },
+            "(h,r|d,center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cylinder(h,r1|d1,r2|d2,center)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cylinder",
+              "children": [
+                "cylinder"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder"
+            },
+            "(h,r1|d1,r2|d2,center)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "polyhedron(points, faces, convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "polyhedron",
+              "children": [
+                "polyhedron"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#polyhedron"
+            },
+            "(points, faces, convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "import(\"….extformats: STL|OFF|AMF|3MF\", convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "import",
+              "children": [
+                "import"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Importing_Geometry#import"
+            },
+            "(\"….",
+            {
+              "tag": "span",
+              "text": "extformats: STL|OFF|AMF|3MF",
+              "children": [
+                "ext",
+                {
+                  "tag": "span",
+                  "text": "formats: STL|OFF|AMF|3MF",
+                  "children": [
+                    "formats: STL|OFF|AMF|3MF"
+                  ]
+                }
+              ]
+            },
+            "\", convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "linear_extrude(height,center,convexity,twist,slices)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "linear_extrude",
+              "children": [
+                "linear_extrude"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#linear_extrude"
+            },
+            "(height,center,convexity,twist,slices)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "rotate_extrude(angle,convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "rotate_extrude",
+              "children": [
+                "rotate_extrude"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#rotate_extrude"
+            },
+            "(angle,convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "surface(file = \"….extformats: DAT|PNG\",center,convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "surface",
+              "children": [
+                "surface"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#surface"
+            },
+            "(file = \"….",
+            {
+              "tag": "span",
+              "text": "extformats: DAT|PNG",
+              "children": [
+                "ext",
+                {
+                  "tag": "span",
+                  "text": "formats: DAT|PNG",
+                  "children": [
+                    "formats: DAT|PNG"
+                  ]
+                }
+              ]
+            },
+            "\",center,convexity)"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Transformations",
+      "content": [
+        {
+          "tag": "code",
+          "text": "translate([x,y,z])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "translate",
+              "children": [
+                "translate"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#translate"
+            },
+            "([x,y,z])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "rotate([x,y,z])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "rotate",
+              "children": [
+                "rotate"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#rotate"
+            },
+            "([x,y,z])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "rotate(a, [x,y,z])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "rotate",
+              "children": [
+                "rotate"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#rotate"
+            },
+            "(a, [x,y,z])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "scale([x,y,z])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "scale",
+              "children": [
+                "scale"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#scale"
+            },
+            "([x,y,z])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "resize([x,y,z],auto,convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "resize",
+              "children": [
+                "resize"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize"
+            },
+            "([x,y,z],auto,convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "mirror([x,y,z])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "mirror",
+              "children": [
+                "mirror"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#mirror"
+            },
+            "([x,y,z])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "multmatrix(m)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "multmatrix",
+              "children": [
+                "multmatrix"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#multmatrix"
+            },
+            "(m)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "color(\"colorname\",alpha)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "color",
+              "children": [
+                "color"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color"
+            },
+            "(\"colorname\",alpha)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "color(\"#hexvalue#rgb|#rgba|#rrggbb|#rrggbbaa\")",
+          "children": [
+            {
+              "tag": "a",
+              "text": "color",
+              "children": [
+                "color"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color"
+            },
+            "(\"#",
+            {
+              "tag": "span",
+              "text": "hexvalue#rgb|#rgba|#rrggbb|#rrggbbaa",
+              "children": [
+                "hexvalue",
+                {
+                  "tag": "span",
+                  "text": "#rgb|#rgba|#rrggbb|#rrggbbaa",
+                  "children": [
+                    "#rgb|#rgba|#rrggbb|#rrggbbaa"
+                  ]
+                }
+              ]
+            },
+            "\")"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "color([r,g,b,a])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "color",
+              "children": [
+                "color"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color"
+            },
+            "([r,g,b,a])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "offset(r|delta,chamfer)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "offset",
+              "children": [
+                "offset"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#offset"
+            },
+            "(r|delta,chamfer)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "hull()",
+          "children": [
+            {
+              "tag": "a",
+              "text": "hull",
+              "children": [
+                "hull"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#hull"
+            },
+            "()"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "minkowski(convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "minkowski",
+              "children": [
+                "minkowski"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski"
+            },
+            "(convexity)"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Lists",
+      "content": [
+        {
+          "tag": "dl",
+          "text": "list = […, …, …];create a listvar = list[2];index a list (from 0)var = list.z;dot notation indexing (x/y/z)",
+          "children": [
+            {
+              "tag": "dt",
+              "text": "list = […, …, …];",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "list = […, …, …];",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "list = […, …, …];",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Vectors"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "create a list",
+              "children": [
+                "create a list"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "var = list[2];",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "var = list[2];",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "var = list[2];",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Indexing_elements_within_vectors"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "index a list (from 0)",
+              "children": [
+                "index a list (from 0)"
+              ]
+            },
+            {
+              "tag": "dt",
+              "text": "var = list.z;",
+              "children": [
+                {
+                  "tag": "code",
+                  "text": "var = list.z;",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "var = list.z;",
+                      "children": [],
+                      "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Dot_notation_indexing"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "dd",
+              "text": "dot notation indexing (x/y/z)",
+              "children": [
+                "dot notation indexing (x/y/z)"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "list = […, …, …];",
+          "type": "inline"
+        },
+        {
+          "code": "var = list[2];",
+          "type": "inline"
+        },
+        {
+          "code": "var = list.z;",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "Boolean operations",
+      "content": [
+        {
+          "tag": "code",
+          "text": "union()",
+          "children": [
+            {
+              "tag": "a",
+              "text": "union",
+              "children": [
+                "union"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#union"
+            },
+            "()"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "difference()",
+          "children": [
+            {
+              "tag": "a",
+              "text": "difference",
+              "children": [
+                "difference"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#difference"
+            },
+            "()"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "intersection()",
+          "children": [
+            {
+              "tag": "a",
+              "text": "intersection",
+              "children": [
+                "intersection"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#intersection"
+            },
+            "()"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "List Comprehensions",
+      "content": [
+        {
+          "tag": "code",
+          "text": "Generate[ for (i =range|list) i ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Generate",
+              "children": [
+                "Generate"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for"
+            },
+            "[ for (i =",
+            {
+              "tag": "i",
+              "text": "range",
+              "children": [
+                "range"
+              ]
+            },
+            "|",
+            {
+              "tag": "i",
+              "text": "list",
+              "children": [
+                "list"
+              ]
+            },
+            ") i ]"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "Generate[ for (init;condition;next) i ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Generate",
+              "children": [
+                "Generate"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for"
+            },
+            "[ for (",
+            {
+              "tag": "i",
+              "text": "init",
+              "children": [
+                "init"
+              ]
+            },
+            ";",
+            {
+              "tag": "i",
+              "text": "condition",
+              "children": [
+                "condition"
+              ]
+            },
+            ";",
+            {
+              "tag": "i",
+              "text": "next",
+              "children": [
+                "next"
+              ]
+            },
+            ") i ]"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "Flatten[ each i ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Flatten",
+              "children": [
+                "Flatten"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#each"
+            },
+            "[ each i ]"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "Conditions[ for (i = …) if (condition(i)) i ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Conditions",
+              "children": [
+                "Conditions"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if"
+            },
+            "[ for (i = …) if (condition(i)) i ]"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "Conditions[ for (i = …) if (condition(i)) x else y ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Conditions",
+              "children": [
+                "Conditions"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if/else"
+            },
+            "[ for (i = …) if (condition(i)) x else y ]"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "Assignments[ for (i = …) let (assignments) a ]",
+          "children": [
+            {
+              "tag": "a",
+              "text": "Assignments",
+              "children": [
+                "Assignments"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#let"
+            },
+            "[ for (i = …) let (assignments) a ]"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Flow Control",
+      "content": [
+        {
+          "tag": "code",
+          "text": "for(i = [start:end]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "for",
+              "children": [
+                "for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop"
+            },
+            "(i = [",
+            {
+              "tag": "span",
+              "text": "start",
+              "children": [
+                "start"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "end",
+              "children": [
+                "end"
+              ]
+            },
+            "]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "for(i = [start:step:end]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "for",
+              "children": [
+                "for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop"
+            },
+            "(i = [",
+            {
+              "tag": "span",
+              "text": "start",
+              "children": [
+                "start"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "step",
+              "children": [
+                "step"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "end",
+              "children": [
+                "end"
+              ]
+            },
+            "]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "for(i = […,…,…]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "for",
+              "children": [
+                "for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop"
+            },
+            "(i = […,…,…]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "for(i = …, j = …, …) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "for",
+              "children": [
+                "for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop"
+            },
+            "(i = …, j = …, …) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "intersection_for(i = [start:end]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "intersection_for",
+              "children": [
+                "intersection_for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop"
+            },
+            "(i = [",
+            {
+              "tag": "span",
+              "text": "start",
+              "children": [
+                "start"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "end",
+              "children": [
+                "end"
+              ]
+            },
+            "]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "intersection_for(i = [start:step:end]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "intersection_for",
+              "children": [
+                "intersection_for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop"
+            },
+            "(i = [",
+            {
+              "tag": "span",
+              "text": "start",
+              "children": [
+                "start"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "step",
+              "children": [
+                "step"
+              ]
+            },
+            ":",
+            {
+              "tag": "span",
+              "text": "end",
+              "children": [
+                "end"
+              ]
+            },
+            "]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "intersection_for(i = […,…,…]) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "intersection_for",
+              "children": [
+                "intersection_for"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop"
+            },
+            "(i = […,…,…]) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "if(…) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "if",
+              "children": [
+                "if"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#If_Statement"
+            },
+            "(…) { … }"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "let(…) { … }",
+          "children": [
+            {
+              "tag": "a",
+              "text": "let",
+              "children": [
+                "let"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Let_Statement"
+            },
+            "(…) { … }"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Type test functions",
+      "content": [
+        {
+          "tag": "code",
+          "text": "is_undef",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_undef",
+              "children": [
+                "is_undef"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_undef"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "is_bool",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_bool",
+              "children": [
+                "is_bool"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_bool"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "is_num",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_num",
+              "children": [
+                "is_num"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_num"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "is_string",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_string",
+              "children": [
+                "is_string"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_string"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "is_list",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_list",
+              "children": [
+                "is_list"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_list"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "is_function",
+          "children": [
+            {
+              "tag": "a",
+              "text": "is_function",
+              "children": [
+                "is_function"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_function"
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Other",
+      "content": [
+        {
+          "tag": "code",
+          "text": "echo(…)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "echo",
+              "children": [
+                "echo"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#echo"
+            },
+            "(…)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "render(convexity)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "render",
+              "children": [
+                "render"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#render"
+            },
+            "(convexity)"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "children([idx])",
+          "children": [
+            {
+              "tag": "a",
+              "text": "children",
+              "children": [
+                "children"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Children"
+            },
+            "([idx])"
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "assert(condition, message)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "assert",
+              "children": [
+                "assert"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#assert"
+            },
+            "(condition, message)"
+          ]
+        },
+        {
+          "tag": "s",
+          "text": "assign(…) { … }",
+          "children": [
+            {
+              "tag": "code",
+              "text": "assign(…) { … }",
+              "children": [
+                {
+                  "tag": "a",
+                  "text": "assign",
+                  "children": [
+                    "assign"
+                  ],
+                  "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Assign_Statement"
+                },
+                "(…) { … }"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [
+        {
+          "code": "assign(…) { … }",
+          "type": "inline"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "title": "Functions",
+      "content": [
+        {
+          "tag": "code",
+          "text": "concat",
+          "children": [
+            {
+              "tag": "a",
+              "text": "concat",
+              "children": [
+                "concat"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#concat"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "lookup",
+          "children": [
+            {
+              "tag": "a",
+              "text": "lookup",
+              "children": [
+                "lookup"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#lookup"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "str",
+          "children": [
+            {
+              "tag": "a",
+              "text": "str",
+              "children": [
+                "str"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/String_Functions#str"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "chr",
+          "children": [
+            {
+              "tag": "a",
+              "text": "chr",
+              "children": [
+                "chr"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/String_Functions#chr"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "ord",
+          "children": [
+            {
+              "tag": "a",
+              "text": "ord",
+              "children": [
+                "ord"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/String_Functions#ord"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "search",
+          "children": [
+            {
+              "tag": "a",
+              "text": "search",
+              "children": [
+                "search"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#search"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "version",
+          "children": [
+            {
+              "tag": "a",
+              "text": "version",
+              "children": [
+                "version"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "version_num",
+          "children": [
+            {
+              "tag": "a",
+              "text": "version_num",
+              "children": [
+                "version_num"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "parent_module(idx)",
+          "children": [
+            {
+              "tag": "a",
+              "text": "parent_module",
+              "children": [
+                "parent_module"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#parent_module.28n.29_and_.24parent_modules"
+            },
+            "(idx)"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Mathematical",
+      "content": [
+        {
+          "tag": "code",
+          "text": "abs",
+          "children": [
+            {
+              "tag": "a",
+              "text": "abs",
+              "children": [
+                "abs"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#abs"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "sign",
+          "children": [
+            {
+              "tag": "a",
+              "text": "sign",
+              "children": [
+                "sign"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sign"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "sin",
+          "children": [
+            {
+              "tag": "a",
+              "text": "sin",
+              "children": [
+                "sin"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sin"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cos",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cos",
+              "children": [
+                "cos"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#cos"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "tan",
+          "children": [
+            {
+              "tag": "a",
+              "text": "tan",
+              "children": [
+                "tan"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#tan"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "acos",
+          "children": [
+            {
+              "tag": "a",
+              "text": "acos",
+              "children": [
+                "acos"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#acos"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "asin",
+          "children": [
+            {
+              "tag": "a",
+              "text": "asin",
+              "children": [
+                "asin"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#asin"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "atan",
+          "children": [
+            {
+              "tag": "a",
+              "text": "atan",
+              "children": [
+                "atan"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#atan"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "atan2",
+          "children": [
+            {
+              "tag": "a",
+              "text": "atan2",
+              "children": [
+                "atan2"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#atan2"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "floor",
+          "children": [
+            {
+              "tag": "a",
+              "text": "floor",
+              "children": [
+                "floor"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#floor"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "round",
+          "children": [
+            {
+              "tag": "a",
+              "text": "round",
+              "children": [
+                "round"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#round"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "ceil",
+          "children": [
+            {
+              "tag": "a",
+              "text": "ceil",
+              "children": [
+                "ceil"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ceil"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "ln",
+          "children": [
+            {
+              "tag": "a",
+              "text": "ln",
+              "children": [
+                "ln"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ln"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "len",
+          "children": [
+            {
+              "tag": "a",
+              "text": "len",
+              "children": [
+                "len"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#len"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "let",
+          "children": [
+            {
+              "tag": "a",
+              "text": "let",
+              "children": [
+                "let"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#let"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "log",
+          "children": [
+            {
+              "tag": "a",
+              "text": "log",
+              "children": [
+                "log"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#log"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "pow",
+          "children": [
+            {
+              "tag": "a",
+              "text": "pow",
+              "children": [
+                "pow"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#pow"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "sqrt",
+          "children": [
+            {
+              "tag": "a",
+              "text": "sqrt",
+              "children": [
+                "sqrt"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sqrt"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "exp",
+          "children": [
+            {
+              "tag": "a",
+              "text": "exp",
+              "children": [
+                "exp"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#exp"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "rands",
+          "children": [
+            {
+              "tag": "a",
+              "text": "rands",
+              "children": [
+                "rands"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#rands"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "min",
+          "children": [
+            {
+              "tag": "a",
+              "text": "min",
+              "children": [
+                "min"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#min"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "max",
+          "children": [
+            {
+              "tag": "a",
+              "text": "max",
+              "children": [
+                "max"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#max"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "norm",
+          "children": [
+            {
+              "tag": "a",
+              "text": "norm",
+              "children": [
+                "norm"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#norm"
+            }
+          ]
+        },
+        {
+          "tag": "code",
+          "text": "cross",
+          "children": [
+            {
+              "tag": "a",
+              "text": "cross",
+              "children": [
+                "cross"
+              ],
+              "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#cross"
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

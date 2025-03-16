@@ -1,0 +1,447 @@
+{
+  "title": "OpenSCAD User Manual/String Functions",
+  "url": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/String_Functions#str",
+  "sections": [
+    {
+      "title": "str",
+      "id": "str",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=1"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "chr",
+      "id": "chr",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=2"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "ord",
+      "id": "ord",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=3"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "len",
+      "id": "len",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=4"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "Also See search()",
+      "id": "Also_See_search()",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=5"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "is_string(value)",
+      "id": "is_string(value)",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=6"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    },
+    {
+      "title": "User defined functions",
+      "id": "User_defined_functions",
+      "content": [
+        {
+          "tag": "span",
+          "text": "[edit|edit source]",
+          "children": [
+            {
+              "tag": "span",
+              "text": "[",
+              "children": [
+                "["
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit",
+                  "children": [
+                    "edit"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&veaction=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "|",
+              "children": [
+                "|"
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "edit source",
+              "children": [
+                {
+                  "tag": "span",
+                  "text": "edit source",
+                  "children": [
+                    "edit source"
+                  ]
+                }
+              ],
+              "href": "/w/index.php?title=OpenSCAD_User_Manual/String_Functions&action=edit&section=7"
+            },
+            {
+              "tag": "span",
+              "text": "]",
+              "children": [
+                "]"
+              ]
+            }
+          ]
+        }
+      ],
+      "code_examples": [],
+      "parameters": []
+    }
+  ]
+}

@@ -1,0 +1,4846 @@
+# OpenSCAD Documentation Training Data
+
+## CHEATSHEET
+
+### v2021.01
+
+
+### Syntax
+
+var=value;
+
+var= cond?value_if_true:value_if_false;
+
+var=function(x) x + x;
+
+modulename(…) { … }name();
+
+functionname(…) = …name();
+
+include<….scad>
+
+use<….scad>
+
+
+### Constants
+
+undefundefined valuePImathematical constantπ(~3.14159)
+
+```scad
+undef
+```
+
+```scad
+PI
+```
+
+
+### Operators
+
+n + mAdditionn - mSubtractionn * mMultiplicationn / mDivisionn % mModulon ^ mExponentiationn < mLess Thann <= mLess or Equalb == cEqualb != cNot Equaln >= mGreater or Equaln > mGreater Thanb && cLogical Andb || cLogical Or!bNegation
+
+```scad
+n + m
+```
+
+```scad
+n - m
+```
+
+```scad
+n * m
+```
+
+```scad
+n / m
+```
+
+```scad
+n % m
+```
+
+```scad
+n ^ m
+```
+
+```scad
+n < m
+```
+
+```scad
+n <= m
+```
+
+```scad
+b == c
+```
+
+```scad
+b != c
+```
+
+```scad
+n >= m
+```
+
+```scad
+n > m
+```
+
+```scad
+b && c
+```
+
+```scad
+b || c
+```
+
+```scad
+!b
+```
+
+
+### Special variables
+
+$faminimum angle$fsminimum size$fnnumber of fragments$tanimation step$vprviewport rotation angles in degrees$vptviewport translation$vpdviewport camera distance$vpfviewport camera field of view$childrennumber of module children$previewtrue in F5 preview, false for F6
+
+```scad
+$fa
+```
+
+```scad
+$fs
+```
+
+```scad
+$fn
+```
+
+```scad
+$t
+```
+
+```scad
+$vpr
+```
+
+```scad
+$vpt
+```
+
+```scad
+$vpd
+```
+
+```scad
+$vpf
+```
+
+```scad
+$children
+```
+
+```scad
+$preview
+```
+
+
+### Modifier Characters
+
+*disable!show only#highlight / debug%transparent / background
+
+```scad
+*
+```
+
+```scad
+!
+```
+
+```scad
+#
+```
+
+```scad
+%
+```
+
+
+### 2D
+
+circle(radius | d=diameter)
+
+square(size,center)
+
+square([width,height],center)
+
+polygon([points])
+
+polygon([points],[paths])
+
+text(t, size, font,halign, valign, spacing,direction, language, script)
+
+import("….extformats: DXF|SVG", convexity)
+
+projection(cut)
+
+
+### 3D
+
+sphere(radius | d=diameter)
+
+cube(size, center)
+
+cube([width,depth,height], center)
+
+cylinder(h,r|d,center)
+
+cylinder(h,r1|d1,r2|d2,center)
+
+polyhedron(points, faces, convexity)
+
+import("….extformats: STL|OFF|AMF|3MF", convexity)
+
+linear_extrude(height,center,convexity,twist,slices)
+
+rotate_extrude(angle,convexity)
+
+surface(file = "….extformats: DAT|PNG",center,convexity)
+
+
+### Transformations
+
+translate([x,y,z])
+
+rotate([x,y,z])
+
+rotate(a, [x,y,z])
+
+scale([x,y,z])
+
+resize([x,y,z],auto,convexity)
+
+mirror([x,y,z])
+
+multmatrix(m)
+
+color("colorname",alpha)
+
+color("#hexvalue#rgb|#rgba|#rrggbb|#rrggbbaa")
+
+color([r,g,b,a])
+
+offset(r|delta,chamfer)
+
+hull()
+
+minkowski(convexity)
+
+
+### Lists
+
+list = […, …, …];create a listvar = list[2];index a list (from 0)var = list.z;dot notation indexing (x/y/z)
+
+```scad
+list = […, …, …];
+```
+
+```scad
+var = list[2];
+```
+
+```scad
+var = list.z;
+```
+
+
+### Boolean operations
+
+union()
+
+difference()
+
+intersection()
+
+
+### List Comprehensions
+
+Generate[ for (i =range|list) i ]
+
+Generate[ for (init;condition;next) i ]
+
+Flatten[ each i ]
+
+Conditions[ for (i = …) if (condition(i)) i ]
+
+Conditions[ for (i = …) if (condition(i)) x else y ]
+
+Assignments[ for (i = …) let (assignments) a ]
+
+
+### Flow Control
+
+for(i = [start:end]) { … }
+
+for(i = [start:step:end]) { … }
+
+for(i = […,…,…]) { … }
+
+for(i = …, j = …, …) { … }
+
+intersection_for(i = [start:end]) { … }
+
+intersection_for(i = [start:step:end]) { … }
+
+intersection_for(i = […,…,…]) { … }
+
+if(…) { … }
+
+let(…) { … }
+
+
+### Type test functions
+
+is_undef
+
+is_bool
+
+is_num
+
+is_string
+
+is_list
+
+is_function
+
+
+### Other
+
+echo(…)
+
+render(convexity)
+
+children([idx])
+
+assert(condition, message)
+
+assign(…) { … }
+
+```scad
+assign(…) { … }
+```
+
+
+### Functions
+
+concat
+
+lookup
+
+str
+
+chr
+
+ord
+
+search
+
+version
+
+version_num
+
+parent_module(idx)
+
+
+### Mathematical
+
+abs
+
+sign
+
+sin
+
+cos
+
+tan
+
+acos
+
+asin
+
+atan
+
+atan2
+
+floor
+
+round
+
+ceil
+
+ln
+
+len
+
+let
+
+log
+
+pow
+
+sqrt
+
+exp
+
+rands
+
+min
+
+max
+
+norm
+
+cross
+
+
+## LANGUAGE_REFERENCE
+
+### OpenSCAD User Manual/The OpenSCAD Language
+
+### OpenSCAD User Manual/Other Language Features
+
+#### Special variables
+
+[edit|edit source]
+
+
+#### Circle resolution:  $fa, $fs, and $fn
+
+[edit|edit source]
+
+
+#### Animation: $t
+
+[edit|edit source]
+
+
+#### Simple harmonic motion
+
+[edit|edit source]
+
+
+#### Rotation
+
+[edit|edit source]
+
+
+#### Part-rotation
+
+[edit|edit source]
+
+
+#### Circular orbit
+
+[edit|edit source]
+
+
+#### Circular orbit without rotation
+
+[edit|edit source]
+
+
+#### Elliptical orbit
+
+[edit|edit source]
+
+
+#### Elliptical motion
+
+[edit|edit source]
+
+
+#### Viewport:  $vpr, $vpt, $vpf and $vpd
+
+[edit|edit source]
+
+
+#### Execution mode:  $preview
+
+[edit|edit source]
+
+
+#### Echo module
+
+[edit|edit source]
+
+
+#### Rounding examples
+
+[edit|edit source]
+
+
+#### Small and large Numbers
+
+[edit|edit source]
+
+
+#### HTML
+
+[edit|edit source]
+
+
+#### Echo function
+
+[edit|edit source]
+
+
+#### render
+
+[edit|edit source]
+
+
+#### surface
+
+[edit|edit source]
+
+
+#### Text file format
+
+[edit|edit source]
+
+
+#### Images
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+#### search
+
+[edit|edit source]
+
+
+#### Search usage
+
+[edit|edit source]
+
+
+#### Search arguments
+
+[edit|edit source]
+
+
+#### Search usage examples
+
+[edit|edit source]
+
+
+#### Index values return as list
+
+[edit|edit source]
+
+
+#### Search on different column; return Index values
+
+[edit|edit source]
+
+
+#### Search on list of values
+
+[edit|edit source]
+
+
+#### Search on list of strings
+
+[edit|edit source]
+
+
+#### Getting the right results
+
+[edit|edit source]
+
+
+#### OpenSCAD version
+
+[edit|edit source]
+
+
+#### parent_module(n) and $parent_modules
+
+[edit|edit source]
+
+
+#### assert
+
+[edit|edit source]
+
+
+#### Example
+
+[edit|edit source]
+
+
+#### Checking parameters
+
+[edit|edit source]
+
+
+#### Adding message
+
+[edit|edit source]
+
+
+#### Using assertions in function
+
+[edit|edit source]
+
+
+## USER_MANUAL
+
+### OpenSCAD User Manual/STL Export
+
+#### Export
+
+[edit|edit source]
+
+
+#### STL Export
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/undersized circular objects
+
+#### cylinder
+
+[edit|edit source]
+
+
+#### cone
+
+[edit|edit source]
+
+
+#### circle
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Mathematical Operators
+
+#### Scalar arithmetic operators
+
+[edit|edit source]
+
+
+#### Relational operators
+
+[edit|edit source]
+
+
+#### Logical operators
+
+[edit|edit source]
+
+
+#### Conditional operator
+
+[edit|edit source]
+
+
+#### Vector-number operators
+
+[edit|edit source]
+
+
+#### Vector operators
+
+[edit|edit source]
+
+
+#### Vector dot-product operator
+
+[edit|edit source]
+
+
+#### Matrix multiplication
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Building on Windows
+
+#### Downloads
+
+[edit|edit source]
+
+
+#### Installing
+
+[edit|edit source]
+
+
+#### Compiling Dependencies
+
+[edit|edit source]
+
+
+#### Qt
+
+[edit|edit source]
+
+
+#### CGAL
+
+[edit|edit source]
+
+
+#### OpenCSG
+
+[edit|edit source]
+
+
+#### OpenSCAD
+
+[edit|edit source]
+
+
+#### Building an installer
+
+[edit|edit source]
+
+
+#### Compiling the regression tests
+
+[edit|edit source]
+
+
+#### Troubleshooting
+
+[edit|edit source]
+
+
+#### CGAL
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/2D to 3D Extrusion
+
+#### linear_extrude
+
+[edit|edit source]
+
+
+#### Usage
+
+[edit|edit source]
+
+
+#### Twist
+
+[edit|edit source]
+
+
+#### Center
+
+[edit|edit source]
+
+
+#### Mesh Refinement
+
+[edit|edit source]
+
+
+#### Scale
+
+[edit|edit source]
+
+
+#### Using with imported SVG
+
+[edit|edit source]
+
+
+#### rotate_extrude
+
+[edit|edit source]
+
+
+#### Usage
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+#### Mesh Refinement
+
+[edit|edit source]
+
+
+#### Extruding a Polygon
+
+[edit|edit source]
+
+
+#### Orientation
+
+[edit|edit source]
+
+
+#### Description of extrude parameters
+
+[edit|edit source]
+
+
+#### Extrude parameters for all extrusion modes
+
+[edit|edit source]
+
+
+#### Extrude parameters for linear extrusion only
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps/Opening an existing example model
+
+### OpenSCAD User Manual/Print version
+
+#### Additional Resources
+
+[edit|edit source]
+
+
+#### History
+
+[edit|edit source]
+
+
+#### Compiling and rendering our first model
+
+[edit|edit source]
+
+
+#### There is no semicolon following the translate command
+
+[edit|edit source]
+
+
+#### See Also
+
+[edit|edit source]
+
+
+#### See Also
+
+[edit|edit source]
+
+
+#### Surfaces
+
+[edit|edit source]
+
+
+#### Wireframe
+
+[edit|edit source]
+
+
+#### The OpenCSG view
+
+[edit|edit source]
+
+
+#### The Thrown Together View
+
+[edit|edit source]
+
+
+#### User Interface
+
+[edit|edit source]
+
+
+#### Viewing area
+
+[edit|edit source]
+
+
+#### Console window
+
+[edit|edit source]
+
+
+#### Text editor
+
+[edit|edit source]
+
+
+#### Interactive modification of the numerical value
+
+[edit|edit source]
+
+
+#### View navigation
+
+[edit|edit source]
+
+
+#### View setup
+
+[edit|edit source]
+
+
+#### Render modes
+
+[edit|edit source]
+
+
+#### OpenCSG (F9)
+
+[edit|edit source]
+
+
+#### Implementation Details
+
+[edit|edit source]
+
+
+#### CGAL (Surfaces and Grid, F10 and F11)
+
+[edit|edit source]
+
+
+#### Implementation Details
+
+[edit|edit source]
+
+
+#### View options
+
+[edit|edit source]
+
+
+#### Show Edges(Ctrl+1)
+
+[edit|edit source]
+
+
+#### Show Axes(Ctrl+2)
+
+[edit|edit source]
+
+
+#### Show Crosshairs(Ctrl+3)
+
+[edit|edit source]
+
+
+#### Animation
+
+[edit|edit source]
+
+
+#### View alignment
+
+[edit|edit source]
+
+
+#### Dodecahedron
+
+[edit|edit source]
+
+
+#### Icosahedron
+
+[edit|edit source]
+
+
+#### Icosphere
+
+[edit|edit source]
+
+
+#### Half-pyramid
+
+[edit|edit source]
+
+
+#### Bounding Box
+
+[edit|edit source]
+
+
+#### Linear Extrude extended use examples
+
+[edit|edit source]
+
+
+#### Linear Extrude with Scale as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist and Scale as interpolated functions
+
+[edit|edit source]
+
+
+#### Rocket
+
+[edit|edit source]
+
+
+#### Horns
+
+[edit|edit source]
+
+
+#### Strandbeest
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+#### Command line usage
+
+[edit|edit source]
+
+
+#### Export options
+
+[edit|edit source]
+
+
+#### Camera and image output
+
+[edit|edit source]
+
+
+#### Constants
+
+[edit|edit source]
+
+
+#### Command to build required files
+
+[edit|edit source]
+
+
+#### Processing all .scad files in a folder
+
+[edit|edit source]
+
+
+#### Makefile example
+
+[edit|edit source]
+
+
+#### Automatic targets
+
+[edit|edit source]
+
+
+#### Windows notes
+
+[edit|edit source]
+
+
+#### MacOS notes
+
+[edit|edit source]
+
+
+#### Dodecahedron
+
+[edit|edit source]
+
+
+#### Icosahedron
+
+[edit|edit source]
+
+
+#### Icosphere
+
+[edit|edit source]
+
+
+#### Half-pyramid
+
+[edit|edit source]
+
+
+#### Bounding Box
+
+[edit|edit source]
+
+
+#### Linear Extrude extended use examples
+
+[edit|edit source]
+
+
+#### Linear Extrude with Scale as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist and Scale as interpolated functions
+
+[edit|edit source]
+
+
+#### Rocket
+
+[edit|edit source]
+
+
+#### Horns
+
+[edit|edit source]
+
+
+#### Strandbeest
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+#### Export
+
+[edit|edit source]
+
+
+#### STL Export
+
+[edit|edit source]
+
+
+#### Linear Extrude
+
+[edit|edit source]
+
+
+#### Rotate Extrude
+
+[edit|edit source]
+
+
+#### Getting Inkscape to work
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+#### PS/EPS
+
+[edit|edit source]
+
+
+#### SVG
+
+[edit|edit source]
+
+
+#### Makefile automation
+
+[edit|edit source]
+
+
+#### AI (Adobe Illustrator)
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+#### Why use an external editor
+
+[edit|edit source]
+
+
+#### How to use an external editor
+
+[edit|edit source]
+
+
+#### Support of external editors
+
+[edit|edit source]
+
+
+#### Command line usage
+
+[edit|edit source]
+
+
+#### Export options
+
+[edit|edit source]
+
+
+#### Camera and image output
+
+[edit|edit source]
+
+
+#### Constants
+
+[edit|edit source]
+
+
+#### Command to build required files
+
+[edit|edit source]
+
+
+#### Processing all .scad files in a folder
+
+[edit|edit source]
+
+
+#### Makefile example
+
+[edit|edit source]
+
+
+#### Automatic targets
+
+[edit|edit source]
+
+
+#### Windows notes
+
+[edit|edit source]
+
+
+#### MacOS notes
+
+[edit|edit source]
+
+
+#### Env variables
+
+[edit|edit source]
+
+
+#### Per platform roots
+
+[edit|edit source]
+
+
+#### Read-only Resources
+
+[edit|edit source]
+
+
+#### User Resources
+
+[edit|edit source]
+
+
+#### Misc Resources
+
+[edit|edit source]
+
+
+#### Reference
+
+[edit|edit source]
+
+
+#### Prebuilt binary packages
+
+[edit|edit source]
+
+
+#### generic linux binary package
+
+[edit|edit source]
+
+
+#### nightly builds
+
+[edit|edit source]
+
+
+#### chrysn's Ubuntu packages
+
+[edit|edit source]
+
+
+#### Building OpenSCAD yourself
+
+[edit|edit source]
+
+
+#### Installing dependencies
+
+[edit|edit source]
+
+
+#### Prepackaged dependencies
+
+[edit|edit source]
+
+
+#### Verifying dependencies
+
+[edit|edit source]
+
+
+#### Building the dependencies yourself
+
+[edit|edit source]
+
+
+#### Build the OpenSCAD binary
+
+[edit|edit source]
+
+
+#### Experimental
+
+[edit|edit source]
+
+
+#### Compiling the test suite
+
+[edit|edit source]
+
+
+#### Troubleshooting
+
+[edit|edit source]
+
+
+#### Errors about incompatible library versions
+
+[edit|edit source]
+
+
+#### OpenCSG didn't automatically build
+
+[edit|edit source]
+
+
+#### CGAL didn't automatically build
+
+[edit|edit source]
+
+
+#### Compiling fails with an Internal compiler error from GCC or GAS
+
+[edit|edit source]
+
+
+#### Compiling is horribly slow and/or grinds the disk
+
+[edit|edit source]
+
+
+#### BSD issues
+
+[edit|edit source]
+
+
+#### Sun / Solaris / IllumOS / AIX / IRIX / Minix / etc
+
+[edit|edit source]
+
+
+#### Test suite problems
+
+[edit|edit source]
+
+
+#### I moved the dependencies I built and now openscad won't run
+
+[edit|edit source]
+
+
+#### Tricks and tips
+
+[edit|edit source]
+
+
+#### Reduce space of dependency build
+
+[edit|edit source]
+
+
+#### Preferences
+
+[edit|edit source]
+
+
+#### Setup environment to start developing OpenSCAD in Ubuntu 11.04
+
+[edit|edit source]
+
+
+#### The Clang Compiler
+
+[edit|edit source]
+
+
+#### Setup
+
+[edit|edit source]
+
+
+#### Requirements
+
+[edit|edit source]
+
+
+#### Build OpenSCAD
+
+[edit|edit source]
+
+
+#### Downloads
+
+[edit|edit source]
+
+
+#### Installing
+
+[edit|edit source]
+
+
+#### Compiling Dependencies
+
+[edit|edit source]
+
+
+#### Qt
+
+[edit|edit source]
+
+
+#### CGAL
+
+[edit|edit source]
+
+
+#### OpenCSG
+
+[edit|edit source]
+
+
+#### OpenSCAD
+
+[edit|edit source]
+
+
+#### Building an installer
+
+[edit|edit source]
+
+
+#### Compiling the regression tests
+
+[edit|edit source]
+
+
+#### Troubleshooting
+
+[edit|edit source]
+
+
+#### CGAL
+
+[edit|edit source]
+
+
+#### How is OpenSCAD pronounced?
+
+[edit|edit source]
+
+
+#### What is the meaning of the S in OpenSCAD?
+
+[edit|edit source]
+
+
+#### Using OpenSCAD for Windows in VM's or via Remote desktop (Windows RDP or Linux XfreeRDP etc)
+
+[edit|edit source]
+
+
+#### Preview doesn't appear to work at all
+
+[edit|edit source]
+
+
+#### What are those strange flickering artifacts in the preview?
+
+[edit|edit source]
+
+
+#### Why are some parts (e.g. holes) of the model not rendered correctly?
+
+[edit|edit source]
+
+
+#### Why does difference (or intersection) sometimes not work in preview?
+
+[edit|edit source]
+
+
+#### Why is my model appearing with F5 but not F6?
+
+[edit|edit source]
+
+
+#### Why is the preview so slow?
+
+[edit|edit source]
+
+
+#### Why is my imported STL file appearing with F5 but not F6?
+
+[edit|edit source]
+
+
+#### I'm getting "Unsupported DXF Entity" warnings when importing DXF files. What does that mean?
+
+[edit|edit source]
+
+
+#### How can I export multiple parts from one script?
+
+[edit|edit source]
+
+
+#### How can I export screenshots with higher resolution than the current window
+
+[edit|edit source]
+
+
+#### Why am I getting an error when writing a = a + 1?
+
+[edit|edit source]
+
+
+#### OpenSCAD isn't adhering to my GTK desktop theme
+
+[edit|edit source]
+
+
+#### OpenSCAD GUI is not scaled in Gnome on a 4K / HIDPI Monitor
+
+[edit|edit source]
+
+
+#### I'm not getting any menubar when running OpenSCAD in Ubuntu, how can I get it back?
+
+[edit|edit source]
+
+
+#### Why are the error line numbers wrong?
+
+[edit|edit source]
+
+
+#### I don't like the editor, can I use my favourite editor instead?
+
+[edit|edit source]
+
+
+#### Why am I getting "no top level geometry to render"?
+
+[edit|edit source]
+
+
+#### OpenSCAD crashed/was killed, are my unsaved changes lost?
+
+[edit|edit source]
+
+
+#### OpenSCAD crashes when clicking "New" or loading a file on Windows
+
+[edit|edit source]
+
+
+#### OpenSCAD fails to run refering to EVR.dll, MF.dll or MFPlat.dll on Windows
+
+[edit|edit source]
+
+
+#### How do I report bugs?
+
+[edit|edit source]
+
+
+#### How do I request new features?
+
+[edit|edit source]
+
+
+#### How do I report bugs that are related to the Operating System I use?
+
+[edit|edit source]
+
+
+#### Windows
+
+[edit|edit source]
+
+
+#### Mac OS X
+
+[edit|edit source]
+
+
+#### Linux
+
+[edit|edit source]
+
+
+#### Library locations
+
+[edit|edit source]
+
+
+#### SettingOPENSCADPATH
+
+[edit|edit source]
+
+
+#### MCAD
+
+[edit|edit source]
+
+
+#### Other libraries
+
+[edit|edit source]
+
+
+#### Other OpenSCAD tutorials and documentation
+
+[edit|edit source]
+
+
+#### Mathematical Operators
+
+[edit|edit source]
+
+
+#### Mathematical Functions
+
+[edit|edit source]
+
+
+#### String Functions
+
+[edit|edit source]
+
+
+#### Primitive Solids
+
+[edit|edit source]
+
+
+#### Transformations
+
+[edit|edit source]
+
+
+#### Conditional and Iterator Functions
+
+[edit|edit source]
+
+
+#### CSG Modelling
+
+[edit|edit source]
+
+
+#### Modifier Characters
+
+[edit|edit source]
+
+
+#### Modules
+
+[edit|edit source]
+
+
+#### Include Statement
+
+[edit|edit source]
+
+
+#### Other Language Features
+
+[edit|edit source]
+
+
+#### 2D Primitives
+
+[edit|edit source]
+
+
+#### 3D to 2D Projection
+
+[edit|edit source]
+
+
+#### 2D to 3D Extrusion
+
+[edit|edit source]
+
+
+#### DXF Extrusion
+
+[edit|edit source]
+
+
+#### STL Import
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Importing Geometry
+
+#### import
+
+[edit|edit source]
+
+
+#### Parameters
+
+[edit|edit source]
+
+
+#### Convexity
+
+[edit|edit source]
+
+
+#### Notes
+
+[edit|edit source]
+
+
+#### CGAL ERROR: assertion violation!
+
+[edit|edit source]
+
+
+#### Importing JSON
+
+[edit|edit source]
+
+
+#### import_dxf
+
+[edit|edit source]
+
+
+#### import_stl
+
+[edit|edit source]
+
+
+#### surface
+
+[edit|edit source]
+
+
+#### Parameters
+
+[edit|edit source]
+
+
+#### Text file format
+
+[edit|edit source]
+
+
+#### Images
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Primitive Solids
+
+#### cube
+
+[edit|edit source]
+
+
+#### sphere
+
+[edit|edit source]
+
+
+#### cylinder
+
+[edit|edit source]
+
+
+#### polyhedron
+
+[edit|edit source]
+
+
+#### Debugging polyhedra
+
+[edit|edit source]
+
+
+#### Mis-ordered faces
+
+[edit|edit source]
+
+
+#### Point repetitions in a polyhedron point list
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/CSG Export
+
+#### See Also
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Export
+
+#### export
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Integration with other applications
+
+#### FreeCAD
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Submitting patches
+
+#### Brief overview
+
+[edit|edit source]
+
+
+#### Steps to follow to submit a patch
+
+[edit|edit source]
+
+
+#### Alternative
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Building on Microsoft Windows
+
+#### Set up tools and dependencies
+
+[edit|edit source]
+
+
+#### Install OpenSCAD build dependencies
+
+[edit|edit source]
+
+
+#### Set up source directory
+
+[edit|edit source]
+
+
+#### Build with command line
+
+[edit|edit source]
+
+
+#### Set up build directory
+
+[edit|edit source]
+
+
+#### Build
+
+[edit|edit source]
+
+
+#### Run
+
+[edit|edit source]
+
+
+#### Build with Qt Creator IDE
+
+[edit|edit source]
+
+
+#### Install QT Creator
+
+[edit|edit source]
+
+
+#### Load project
+
+[edit|edit source]
+
+
+#### Build
+
+[edit|edit source]
+
+
+#### 32-bit support
+
+[edit|edit source]
+
+
+#### Prebuilt OpenSCAD
+
+[edit|edit source]
+
+
+#### Historical Notes
+
+[edit|edit source]
+
+
+#### QtCreator
+
+[edit|edit source]
+
+
+#### Building Debug Version
+
+[edit|edit source]
+
+
+#### OpenGL (Optional)
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Using OpenSCAD in a command line environment
+
+#### Command line usage
+
+[edit|edit source]
+
+
+#### Export options
+
+[edit|edit source]
+
+
+#### Camera and image output
+
+[edit|edit source]
+
+
+#### Constants
+
+[edit|edit source]
+
+
+#### Command to build required files
+
+[edit|edit source]
+
+
+#### Processing all .scad files in a folder
+
+[edit|edit source]
+
+
+#### Makefile example
+
+[edit|edit source]
+
+
+#### Automatic targets
+
+[edit|edit source]
+
+
+#### Windows notes
+
+[edit|edit source]
+
+
+#### MacOS notes
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Modifier Characters
+
+#### Advanced concept
+
+[edit|edit source]
+
+
+#### Background modifier
+
+[edit|edit source]
+
+
+#### Debug modifier
+
+[edit|edit source]
+
+
+#### Root modifier
+
+[edit|edit source]
+
+
+#### Disable modifier
+
+[edit|edit source]
+
+
+#### Echo statements
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Command Glossary
+
+#### Mathematical Operators
+
+[edit|edit source]
+
+
+#### Mathematical Functions
+
+[edit|edit source]
+
+
+#### String Functions
+
+[edit|edit source]
+
+
+#### Primitive Solids
+
+[edit|edit source]
+
+
+#### Transformations
+
+[edit|edit source]
+
+
+#### Conditional and Iterator Functions
+
+[edit|edit source]
+
+
+#### CSG Modelling
+
+[edit|edit source]
+
+
+#### Modifier Characters
+
+[edit|edit source]
+
+
+#### Modules
+
+[edit|edit source]
+
+
+#### Include Statement
+
+[edit|edit source]
+
+
+#### Other Language Features
+
+[edit|edit source]
+
+
+#### 2D Primitives
+
+[edit|edit source]
+
+
+#### 3D to 2D Projection
+
+[edit|edit source]
+
+
+#### 2D to 3D Extrusion
+
+[edit|edit source]
+
+
+#### DXF Extrusion
+
+[edit|edit source]
+
+
+#### STL Import
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps/Creating a simple model
+
+#### Compiling and rendering our first model
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/General
+
+#### Comments
+
+[edit|edit source]
+
+
+#### Values and data types
+
+[edit|edit source]
+
+
+#### Numbers
+
+[edit|edit source]
+
+
+#### Boolean values
+
+[edit|edit source]
+
+
+#### Strings
+
+[edit|edit source]
+
+
+#### Ranges
+
+[edit|edit source]
+
+
+#### The undefined value
+
+[edit|edit source]
+
+
+#### Variables
+
+[edit|edit source]
+
+
+#### Undefined variable
+
+[edit|edit source]
+
+
+#### Scope of variables
+
+[edit|edit source]
+
+
+#### Variables are set at compile-time, not run-time
+
+[edit|edit source]
+
+
+#### Special variables
+
+[edit|edit source]
+
+
+#### Vectors
+
+[edit|edit source]
+
+
+#### Creation
+
+[edit|edit source]
+
+
+#### Indexing elements within vectors
+
+[edit|edit source]
+
+
+#### String indexing
+
+[edit|edit source]
+
+
+#### Dot notation indexing
+
+[edit|edit source]
+
+
+#### Vector operators
+
+[edit|edit source]
+
+
+#### concat
+
+[edit|edit source]
+
+
+#### len
+
+[edit|edit source]
+
+
+#### Matrix
+
+[edit|edit source]
+
+
+#### Objects
+
+[edit|edit source]
+
+
+#### Retrieving a value from an object
+
+[edit|edit source]
+
+
+#### Iterating over object members
+
+[edit|edit source]
+
+
+#### Getting input
+
+[edit|edit source]
+
+
+#### Getting a point from a drawing
+
+[edit|edit source]
+
+
+#### Getting a dimension value
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/SVG Import
+
+#### SVG Import
+
+[edit|edit source]
+
+
+#### Limitations
+
+[edit|edit source]
+
+
+#### ViewBox handling
+
+[edit|edit source]
+
+
+#### DPI handling
+
+[edit|edit source]
+
+
+#### Open and closed shapes
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/User-Defined Functions and Modules
+
+#### Scope
+
+[edit|edit source]
+
+
+#### Functions
+
+[edit|edit source]
+
+
+#### Function use
+
+[edit|edit source]
+
+
+#### Recursive functions
+
+[edit|edit source]
+
+
+#### Function literals
+
+[edit|edit source]
+
+
+#### Overwriting built-in functions
+
+[edit|edit source]
+
+
+#### Modules
+
+[edit|edit source]
+
+
+#### Object modules
+
+[edit|edit source]
+
+
+#### Operator modules
+
+[edit|edit source]
+
+
+#### Children
+
+[edit|edit source]
+
+
+#### Further module examples
+
+[edit|edit source]
+
+
+#### Recursive modules
+
+[edit|edit source]
+
+
+#### Overwriting built-in modules
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps/Positioning an object
+
+#### There is no semicolon following the translate command
+
+[edit|edit source]
+
+
+#### See Also
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/2D Primitives
+
+#### square
+
+[edit|edit source]
+
+
+#### circle
+
+[edit|edit source]
+
+
+#### Ellipses
+
+[edit|edit source]
+
+
+#### Regular Polygons
+
+[edit|edit source]
+
+
+#### polygon
+
+[edit|edit source]
+
+
+#### Without holes
+
+[edit|edit source]
+
+
+#### One hole
+
+[edit|edit source]
+
+
+#### Multi hole
+
+[edit|edit source]
+
+
+#### Extruding a 3D shape from a polygon
+
+[edit|edit source]
+
+
+#### convexity
+
+[edit|edit source]
+
+
+#### import_dxf
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual
+
+#### Introduction
+
+[edit|edit source]
+
+
+#### Additional Resources
+
+[edit|edit source]
+
+
+#### History
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/3D to 2D Projection
+
+### OpenSCAD User Manual/DXF Extrusion
+
+#### Linear Extrude
+
+[edit|edit source]
+
+
+#### Rotate Extrude
+
+[edit|edit source]
+
+
+#### Getting Inkscape to work
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Transformations
+
+#### Basic concept
+
+[edit|edit source]
+
+
+#### Advanced concept
+
+[edit|edit source]
+
+
+#### scale
+
+[edit|edit source]
+
+
+#### resize
+
+[edit|edit source]
+
+
+#### rotate
+
+[edit|edit source]
+
+
+#### Rotation rule help
+
+[edit|edit source]
+
+
+#### translate
+
+[edit|edit source]
+
+
+#### mirror
+
+[edit|edit source]
+
+
+#### Function signature:
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+#### multmatrix
+
+[edit|edit source]
+
+
+#### More?
+
+[edit|edit source]
+
+
+#### color
+
+[edit|edit source]
+
+
+#### Function signature:
+
+[edit|edit source]
+
+
+#### Example
+
+[edit|edit source]
+
+
+#### Example 2
+
+[edit|edit source]
+
+
+#### offset
+
+[edit|edit source]
+
+
+#### fill
+
+[edit|edit source]
+
+
+#### minkowski
+
+[edit|edit source]
+
+
+#### hull
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Building on Mac OS X
+
+### OpenSCAD User Manual/Type Test Functions
+
+#### is_undef
+
+[edit|edit source]
+
+
+#### legacy support
+
+[edit|edit source]
+
+
+#### is_list
+
+[edit|edit source]
+
+
+#### is_num
+
+[edit|edit source]
+
+
+#### is_bool
+
+[edit|edit source]
+
+
+#### is_string
+
+[edit|edit source]
+
+
+#### is_function
+
+[edit|edit source]
+
+
+#### is_object
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/The OpenSCAD User Interface
+
+#### User Interface
+
+[edit|edit source]
+
+
+#### Viewing area
+
+[edit|edit source]
+
+
+#### Console window
+
+[edit|edit source]
+
+
+#### Text editor
+
+[edit|edit source]
+
+
+#### Interactive modification of the numerical value
+
+[edit|edit source]
+
+
+#### View navigation
+
+[edit|edit source]
+
+
+#### View setup
+
+[edit|edit source]
+
+
+#### Render modes
+
+[edit|edit source]
+
+
+#### OpenCSG (F9)
+
+[edit|edit source]
+
+
+#### Implementation Details
+
+[edit|edit source]
+
+
+#### CGAL (Surfaces and Grid, F10 and F11)
+
+[edit|edit source]
+
+
+#### Implementation Details
+
+[edit|edit source]
+
+
+#### View options
+
+[edit|edit source]
+
+
+#### Show Edges(Ctrl+1)
+
+[edit|edit source]
+
+
+#### Show Axes(Ctrl+2)
+
+[edit|edit source]
+
+
+#### Show Crosshairs(Ctrl+3)
+
+[edit|edit source]
+
+
+#### Animation
+
+[edit|edit source]
+
+
+#### View alignment
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/CGAL From Source
+
+### OpenSCAD User Manual/MCAD
+
+#### Overview of MCAD Library
+
+[edit|edit source]
+
+
+#### Usage
+
+[edit|edit source]
+
+
+#### MCAD/regular_shapes.scad
+
+[edit|edit source]
+
+
+#### 2D regular shapes
+
+[edit|edit source]
+
+
+#### regular_polygon(sides, radius),or in older libraries,reg_polygon(sides, radius)
+
+[edit|edit source]
+
+
+#### n-gons 2D shapes
+
+[edit|edit source]
+
+
+#### triangle(radius)
+
+[edit|edit source]
+
+
+#### pentagon(radius)
+
+[edit|edit source]
+
+
+#### hexagon(radius, diameter, across_flats)
+
+[edit|edit source]
+
+
+#### heptagon(radius)
+
+[edit|edit source]
+
+
+#### octagon(radius)
+
+[edit|edit source]
+
+
+#### nonagon(radius)
+
+[edit|edit source]
+
+
+#### decagon(radius)
+
+[edit|edit source]
+
+
+#### hendecagon(radius)
+
+[edit|edit source]
+
+
+#### dodecagon(radius)
+
+[edit|edit source]
+
+
+#### ring(inside_diameter, thickness)
+
+[edit|edit source]
+
+
+#### ellipse(width, height)
+
+[edit|edit source]
+
+
+#### egg_outline(width, length)
+
+[edit|edit source]
+
+
+#### 3D regular shapes
+
+[edit|edit source]
+
+
+#### cone(height, radius, center = false)
+
+[edit|edit source]
+
+
+#### oval_prism(height, rx, ry, center = false)
+
+[edit|edit source]
+
+
+#### oval_tube(height, rx, ry, wall, center = false)
+
+[edit|edit source]
+
+
+#### cylinder_tube(height, radius, wall, center = false)
+
+[edit|edit source]
+
+
+#### triangle_prism(height,radius)
+
+[edit|edit source]
+
+
+#### triangle_tube(height,radius,wall)
+
+[edit|edit source]
+
+
+#### pentagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### pentagon_tube(height,radius,wall)
+
+[edit|edit source]
+
+
+#### hexagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### hexagon_tube(height,radius,wall)
+
+[edit|edit source]
+
+
+#### heptagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### heptagon_tube(height,radius,wall)
+
+[edit|edit source]
+
+
+#### octagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### octagon_tube(height,radius,wall)
+
+[edit|edit source]
+
+
+#### nonagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### decagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### hendecagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### dodecagon_prism(height,radius)
+
+[edit|edit source]
+
+
+#### torus(outerRadius, innerRadius)
+
+[edit|edit source]
+
+
+#### torus2(r1, r2)
+
+[edit|edit source]
+
+
+#### oval_torus(inner_radius, thickness=[0, 0])
+
+[edit|edit source]
+
+
+#### triangle_pyramid(radius)
+
+[edit|edit source]
+
+
+#### square_pyramid(base_x, base_y, height)
+
+[edit|edit source]
+
+
+#### egg(width, length)
+
+[edit|edit source]
+
+
+#### MCAD/involute_gears.scad
+
+[edit|edit source]
+
+
+#### bevel_gear_pair()
+
+[edit|edit source]
+
+
+#### bevel_gear()
+
+[edit|edit source]
+
+
+#### gear()
+
+[edit|edit source]
+
+
+#### Tests
+
+[edit|edit source]
+
+
+#### test_gears()
+
+[edit|edit source]
+
+
+#### test_meshing_double_helix()
+
+[edit|edit source]
+
+
+#### test_bevel_gear()
+
+[edit|edit source]
+
+
+#### test_bevel_gear_pair()
+
+[edit|edit source]
+
+
+#### test_backlash()
+
+[edit|edit source]
+
+
+#### MCAD/teardrop.scad
+
+[edit|edit source]
+
+
+#### MCAD/stepper.scad
+
+[edit|edit source]
+
+
+#### MCAD/nuts_and_bolts.scad
+
+[edit|edit source]
+
+
+#### MCAD/2Dshapes.scad
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Conditional and Iterator Functions
+
+#### For loop
+
+[edit|edit source]
+
+
+#### For each value in arange
+
+[edit|edit source]
+
+
+#### For each element of avector
+
+[edit|edit source]
+
+
+#### For each element of anobject
+
+[edit|edit source]
+
+
+#### Notes
+
+[edit|edit source]
+
+
+#### Nested for()
+
+[edit|edit source]
+
+
+#### Intersection For Loop
+
+[edit|edit source]
+
+
+#### If Statement
+
+[edit|edit source]
+
+
+#### else if
+
+[edit|edit source]
+
+
+#### Conditional ? :
+
+[edit|edit source]
+
+
+#### Recursive function calls
+
+[edit|edit source]
+
+
+#### Formatting complex usage
+
+[edit|edit source]
+
+
+#### Assign Statement
+
+[edit|edit source]
+
+
+#### Let Statement
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Text
+
+#### Using Fonts & Styles
+
+[edit|edit source]
+
+
+#### Alignment
+
+[edit|edit source]
+
+
+#### Vertical alignment
+
+[edit|edit source]
+
+
+#### Horizontal alignment
+
+[edit|edit source]
+
+
+#### 3D text
+
+[edit|edit source]
+
+
+#### Metrics
+
+[edit|edit source]
+
+
+#### textmetrics()
+
+[edit|edit source]
+
+
+#### fontmetrics()
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Paths
+
+#### Env variables
+
+[edit|edit source]
+
+
+#### Per platform roots
+
+[edit|edit source]
+
+
+#### Read-only Resources
+
+[edit|edit source]
+
+
+#### User Resources
+
+[edit|edit source]
+
+
+#### Misc Resources
+
+[edit|edit source]
+
+
+#### Reference
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps/Changing the color of an object
+
+#### See Also
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Include Statement
+
+#### include <filename>
+
+[edit|edit source]
+
+
+#### Variables in included files
+
+[edit|edit source]
+
+
+#### Caution:  Order of Execution
+
+[edit|edit source]
+
+
+#### use <filename>
+
+[edit|edit source]
+
+
+#### Example "Ring Library"
+
+[edit|edit source]
+
+
+#### Additional Notes
+
+[edit|edit source]
+
+
+#### Directory separators
+
+[edit|edit source]
+
+
+#### Nested Include and Use
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Mathematical Functions
+
+#### Trigonometric functions
+
+[edit|edit source]
+
+
+#### cos
+
+[edit|edit source]
+
+
+#### sin
+
+[edit|edit source]
+
+
+#### tan
+
+[edit|edit source]
+
+
+#### acos
+
+[edit|edit source]
+
+
+#### asin
+
+[edit|edit source]
+
+
+#### atan
+
+[edit|edit source]
+
+
+#### atan2
+
+[edit|edit source]
+
+
+#### Other Mathematical Functions
+
+[edit|edit source]
+
+
+#### abs
+
+[edit|edit source]
+
+
+#### ceil
+
+[edit|edit source]
+
+
+#### concat
+
+[edit|edit source]
+
+
+#### cross
+
+[edit|edit source]
+
+
+#### exp
+
+[edit|edit source]
+
+
+#### floor
+
+[edit|edit source]
+
+
+#### ln
+
+[edit|edit source]
+
+
+#### len
+
+[edit|edit source]
+
+
+#### let
+
+[edit|edit source]
+
+
+#### log
+
+[edit|edit source]
+
+
+#### lookup
+
+[edit|edit source]
+
+
+#### max
+
+[edit|edit source]
+
+
+#### min
+
+[edit|edit source]
+
+
+#### mod
+
+[edit|edit source]
+
+
+#### norm
+
+[edit|edit source]
+
+
+#### pow
+
+[edit|edit source]
+
+
+#### rands
+
+[edit|edit source]
+
+
+#### round
+
+[edit|edit source]
+
+
+#### sign
+
+[edit|edit source]
+
+
+#### sqrt
+
+[edit|edit source]
+
+
+#### Infinities and NaNs
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+#### Notes
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Other 2D formats
+
+#### PS/EPS
+
+[edit|edit source]
+
+
+#### SVG
+
+[edit|edit source]
+
+
+#### Makefile automation
+
+[edit|edit source]
+
+
+#### AI (Adobe Illustrator)
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/List Comprehensions
+
+#### Basic Syntax
+
+[edit|edit source]
+
+
+#### multiple generator expressions
+
+[edit|edit source]
+
+
+#### for
+
+[edit|edit source]
+
+
+#### each
+
+[edit|edit source]
+
+
+#### if
+
+[edit|edit source]
+
+
+#### if/else
+
+[edit|edit source]
+
+
+#### let
+
+[edit|edit source]
+
+
+#### Nested loops
+
+[edit|edit source]
+
+
+#### Advanced Examples
+
+[edit|edit source]
+
+
+#### Generating vertices for a polygon
+
+[edit|edit source]
+
+
+#### Flattening a nested vector
+
+[edit|edit source]
+
+
+#### Sorting a vector
+
+[edit|edit source]
+
+
+#### Selecting elements of a vector
+
+[edit|edit source]
+
+
+#### Concatenating two vectors
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Using the 2D Subsystem
+
+#### square
+
+[edit|edit source]
+
+
+#### circle
+
+[edit|edit source]
+
+
+#### Ellipses
+
+[edit|edit source]
+
+
+#### Regular Polygons
+
+[edit|edit source]
+
+
+#### polygon
+
+[edit|edit source]
+
+
+#### Without holes
+
+[edit|edit source]
+
+
+#### One hole
+
+[edit|edit source]
+
+
+#### Multi hole
+
+[edit|edit source]
+
+
+#### Extruding a 3D shape from a polygon
+
+[edit|edit source]
+
+
+#### convexity
+
+[edit|edit source]
+
+
+#### import_dxf
+
+[edit|edit source]
+
+
+#### Using Fonts & Styles
+
+[edit|edit source]
+
+
+#### Alignment
+
+[edit|edit source]
+
+
+#### Vertical alignment
+
+[edit|edit source]
+
+
+#### Horizontal alignment
+
+[edit|edit source]
+
+
+#### 3D text
+
+[edit|edit source]
+
+
+#### Metrics
+
+[edit|edit source]
+
+
+#### textmetrics()
+
+[edit|edit source]
+
+
+#### fontmetrics()
+
+[edit|edit source]
+
+
+#### linear_extrude
+
+[edit|edit source]
+
+
+#### Usage
+
+[edit|edit source]
+
+
+#### Twist
+
+[edit|edit source]
+
+
+#### Center
+
+[edit|edit source]
+
+
+#### Mesh Refinement
+
+[edit|edit source]
+
+
+#### Scale
+
+[edit|edit source]
+
+
+#### Using with imported SVG
+
+[edit|edit source]
+
+
+#### rotate_extrude
+
+[edit|edit source]
+
+
+#### Usage
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+#### Mesh Refinement
+
+[edit|edit source]
+
+
+#### Extruding a Polygon
+
+[edit|edit source]
+
+
+#### Orientation
+
+[edit|edit source]
+
+
+#### Description of extrude parameters
+
+[edit|edit source]
+
+
+#### Extrude parameters for all extrusion modes
+
+[edit|edit source]
+
+
+#### Extrude parameters for linear extrusion only
+
+[edit|edit source]
+
+
+#### Linear Extrude
+
+[edit|edit source]
+
+
+#### Rotate Extrude
+
+[edit|edit source]
+
+
+#### Getting Inkscape to work
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Building on Linux/UNIX
+
+#### Prebuilt binary packages
+
+[edit|edit source]
+
+
+#### generic linux binary package
+
+[edit|edit source]
+
+
+#### nightly builds
+
+[edit|edit source]
+
+
+#### chrysn's Ubuntu packages
+
+[edit|edit source]
+
+
+#### Building OpenSCAD yourself
+
+[edit|edit source]
+
+
+#### Installing dependencies
+
+[edit|edit source]
+
+
+#### Prepackaged dependencies
+
+[edit|edit source]
+
+
+#### Verifying dependencies
+
+[edit|edit source]
+
+
+#### Building the dependencies yourself
+
+[edit|edit source]
+
+
+#### Build the OpenSCAD binary
+
+[edit|edit source]
+
+
+#### Experimental
+
+[edit|edit source]
+
+
+#### Compiling the test suite
+
+[edit|edit source]
+
+
+#### Troubleshooting
+
+[edit|edit source]
+
+
+#### Errors about incompatible library versions
+
+[edit|edit source]
+
+
+#### OpenCSG didn't automatically build
+
+[edit|edit source]
+
+
+#### CGAL didn't automatically build
+
+[edit|edit source]
+
+
+#### Compiling fails with an Internal compiler error from GCC or GAS
+
+[edit|edit source]
+
+
+#### Compiling is horribly slow and/or grinds the disk
+
+[edit|edit source]
+
+
+#### BSD issues
+
+[edit|edit source]
+
+
+#### Sun / Solaris / IllumOS / AIX / IRIX / Minix / etc
+
+[edit|edit source]
+
+
+#### Test suite problems
+
+[edit|edit source]
+
+
+#### I moved the dependencies I built and now openscad won't run
+
+[edit|edit source]
+
+
+#### Tricks and tips
+
+[edit|edit source]
+
+
+#### Reduce space of dependency build
+
+[edit|edit source]
+
+
+#### Preferences
+
+[edit|edit source]
+
+
+#### Setup environment to start developing OpenSCAD in Ubuntu 11.04
+
+[edit|edit source]
+
+
+#### The Clang Compiler
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/CSG Modelling
+
+#### boolean overview
+
+[edit|edit source]
+
+
+#### 2D examples
+
+[edit|edit source]
+
+
+#### 3D examples
+
+[edit|edit source]
+
+
+#### union
+
+[edit|edit source]
+
+
+#### difference
+
+[edit|edit source]
+
+
+#### difference with multiple children
+
+[edit|edit source]
+
+
+#### intersection
+
+[edit|edit source]
+
+
+#### render
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Building OpenSCAD from Sources
+
+#### Structure of OpenSCAD
+
+[edit|edit source]
+
+
+#### OpenCSG
+
+[edit|edit source]
+
+
+#### CGAL
+
+[edit|edit source]
+
+
+#### CGAL and GMPQ
+
+[edit|edit source]
+
+
+#### Throwntogether
+
+[edit|edit source]
+
+
+#### Source Code Notes
+
+[edit|edit source]
+
+
+#### Library notes
+
+[edit|edit source]
+
+
+#### Submitting Patches
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Libraries
+
+#### Library locations
+
+[edit|edit source]
+
+
+#### SettingOPENSCADPATH
+
+[edit|edit source]
+
+
+#### MCAD
+
+[edit|edit source]
+
+
+#### Other libraries
+
+[edit|edit source]
+
+
+#### Other OpenSCAD tutorials and documentation
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/WIP
+
+#### Overview
+
+[edit|edit source]
+
+
+#### Roof
+
+[edit|edit source]
+
+
+#### Text Metrics / Font Metrics
+
+[edit|edit source]
+
+
+#### textmetrics
+
+[edit|edit source]
+
+
+#### fontmetrics
+
+[edit|edit source]
+
+
+#### Module Literals / Module References
+
+[edit|edit source]
+
+
+#### module literals / module references
+
+[edit|edit source]
+
+
+#### Module literal and module reference syntax
+
+[edit|edit source]
+
+
+#### Syntax in detail
+
+[edit|edit source]
+
+
+#### Simple syntax
+
+[edit|edit source]
+
+
+#### Alias syntax
+
+[edit|edit source]
+
+
+#### Arguments forwarding syntax
+
+[edit|edit source]
+
+
+#### Anonymous module syntax without arguments
+
+[edit|edit source]
+
+
+#### Anonymous module syntax with arguments
+
+[edit|edit source]
+
+
+#### Instantiating a module via an expression
+
+[edit|edit source]
+
+
+#### Further examples
+
+[edit|edit source]
+
+
+#### Persistent Cache
+
+[edit|edit source]
+
+
+#### Introduction
+
+[edit|edit source]
+
+
+#### How to use redis for cache?
+
+[edit|edit source]
+
+
+#### How to use local cache?
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Input Devices
+
+#### Introduction
+
+[edit|edit source]
+
+
+#### How to try it out
+
+[edit|edit source]
+
+
+#### Joystick and gamepads
+
+[edit|edit source]
+
+
+#### Joystick-Driver
+
+[edit|edit source]
+
+
+#### linux
+
+[edit|edit source]
+
+
+#### QGamepad-Driver
+
+[edit|edit source]
+
+
+#### 3D-Mouse
+
+[edit|edit source]
+
+
+#### Linux
+
+[edit|edit source]
+
+
+#### Spacenav
+
+[edit|edit source]
+
+
+#### HIDAPI
+
+[edit|edit source]
+
+
+#### Windows
+
+[edit|edit source]
+
+
+#### Mac OS
+
+[edit|edit source]
+
+
+#### DBus
+
+[edit|edit source]
+
+
+#### Debug and testing
+
+[edit|edit source]
+
+
+#### Example
+
+[edit|edit source]
+
+
+#### Camera System
+
+[edit|edit source]
+
+
+#### Actions
+
+[edit|edit source]
+
+
+#### FAQ
+
+[edit|edit source]
+
+
+#### Which button is which?
+
+[edit|edit source]
+
+
+#### View is drifting
+
+[edit|edit source]
+
+
+#### Where are my settings stored?
+
+[edit|edit source]
+
+
+#### Y+Viewport-rel-translation (VRT) Channel is not responding to input
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/FAQ
+
+#### How is OpenSCAD pronounced?
+
+[edit|edit source]
+
+
+#### What is the meaning of the S in OpenSCAD?
+
+[edit|edit source]
+
+
+#### Using OpenSCAD for Windows in VM's or via Remote desktop (Windows RDP or Linux XfreeRDP etc)
+
+[edit|edit source]
+
+
+#### Preview doesn't appear to work at all
+
+[edit|edit source]
+
+
+#### What are those strange flickering artifacts in the preview?
+
+[edit|edit source]
+
+
+#### Why are some parts (e.g. holes) of the model not rendered correctly?
+
+[edit|edit source]
+
+
+#### Why does difference (or intersection) sometimes not work in preview?
+
+[edit|edit source]
+
+
+#### Why is my model appearing with F5 but not F6?
+
+[edit|edit source]
+
+
+#### Why is the preview so slow?
+
+[edit|edit source]
+
+
+#### Why is my imported STL file appearing with F5 but not F6?
+
+[edit|edit source]
+
+
+#### I'm getting "Unsupported DXF Entity" warnings when importing DXF files. What does that mean?
+
+[edit|edit source]
+
+
+#### How can I export multiple parts from one script?
+
+[edit|edit source]
+
+
+#### How can I export screenshots with higher resolution than the current window
+
+[edit|edit source]
+
+
+#### Why am I getting an error when writing a = a + 1?
+
+[edit|edit source]
+
+
+#### OpenSCAD isn't adhering to my GTK desktop theme
+
+[edit|edit source]
+
+
+#### OpenSCAD GUI is not scaled in Gnome on a 4K / HIDPI Monitor
+
+[edit|edit source]
+
+
+#### I'm not getting any menubar when running OpenSCAD in Ubuntu, how can I get it back?
+
+[edit|edit source]
+
+
+#### Why are the error line numbers wrong?
+
+[edit|edit source]
+
+
+#### I don't like the editor, can I use my favourite editor instead?
+
+[edit|edit source]
+
+
+#### Why am I getting "no top level geometry to render"?
+
+[edit|edit source]
+
+
+#### OpenSCAD crashed/was killed, are my unsaved changes lost?
+
+[edit|edit source]
+
+
+#### OpenSCAD crashes when clicking "New" or loading a file on Windows
+
+[edit|edit source]
+
+
+#### OpenSCAD fails to run refering to EVR.dll, MF.dll or MFPlat.dll on Windows
+
+[edit|edit source]
+
+
+#### How do I report bugs?
+
+[edit|edit source]
+
+
+#### How do I request new features?
+
+[edit|edit source]
+
+
+#### How do I report bugs that are related to the Operating System I use?
+
+[edit|edit source]
+
+
+#### Windows
+
+[edit|edit source]
+
+
+#### Mac OS X
+
+[edit|edit source]
+
+
+#### Linux
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Customizer
+
+#### Customizer
+
+[edit|edit source]
+
+
+#### Activation of Customizer panel
+
+[edit|edit source]
+
+
+#### Supported Variables
+
+[edit|edit source]
+
+
+#### Syntax support for generation of the customization form
+
+[edit|edit source]
+
+
+#### Drop down box
+
+[edit|edit source]
+
+
+#### Slider
+
+[edit|edit source]
+
+
+#### Checkbox
+
+[edit|edit source]
+
+
+#### Spinbox
+
+[edit|edit source]
+
+
+#### Textbox
+
+[edit|edit source]
+
+
+#### Special vector
+
+[edit|edit source]
+
+
+#### Unavailable customizations
+
+[edit|edit source]
+
+
+#### Creating Tabs
+
+[edit|edit source]
+
+
+#### [Global]
+
+[edit|edit source]
+
+
+#### [Hidden]
+
+[edit|edit source]
+
+
+#### parameters
+
+[edit|edit source]
+
+
+#### Example showcasing most features
+
+[edit|edit source]
+
+
+#### Saving Parameters value in JSON file
+
+[edit|edit source]
+
+
+#### Cmdline
+
+[edit|edit source]
+
+
+#### GUI
+
+[edit|edit source]
+
+
+#### manually create datasets
+
+[edit|edit source]
+
+
+#### hidden parameters
+
+[edit|edit source]
+
+
+#### Tips and Tricks
+
+[edit|edit source]
+
+
+#### Set Range and Stepping
+
+[edit|edit source]
+
+
+#### Scroll Wheel
+
+[edit|edit source]
+
+
+#### Examples
+
+[edit|edit source]
+
+
+#### color =
+
+[edit|edit source]
+
+
+#### Notes
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/String Functions
+
+#### str
+
+[edit|edit source]
+
+
+#### chr
+
+[edit|edit source]
+
+
+#### ord
+
+[edit|edit source]
+
+
+#### len
+
+[edit|edit source]
+
+
+#### Also See search()
+
+[edit|edit source]
+
+
+#### is_string(value)
+
+[edit|edit source]
+
+
+#### User defined functions
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Cross-compiling for Windows on Linux or Mac OS X
+
+#### Setup
+
+[edit|edit source]
+
+
+#### Requirements
+
+[edit|edit source]
+
+
+#### Build OpenSCAD
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/First Steps/Model views
+
+#### Surfaces
+
+[edit|edit source]
+
+
+#### Wireframe
+
+[edit|edit source]
+
+
+#### The OpenCSG view
+
+[edit|edit source]
+
+
+#### The Thrown Together View
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Using an external Editor with OpenSCAD
+
+#### Why use an external editor
+
+[edit|edit source]
+
+
+#### How to use an external editor
+
+[edit|edit source]
+
+
+#### Support of external editors
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Tips and Tricks
+
+#### Map values from a list
+
+[edit|edit source]
+
+
+#### Filter values in a list
+
+[edit|edit source]
+
+
+#### Add all values in a list
+
+[edit|edit source]
+
+
+#### Cumulative sum
+
+[edit|edit source]
+
+
+#### Count values in a list matching a condition
+
+[edit|edit source]
+
+
+#### Find the index of the maximum value in a list
+
+[edit|edit source]
+
+
+#### Caring about undef
+
+[edit|edit source]
+
+
+#### Stack cylinders on top of each other
+
+[edit|edit source]
+
+
+#### Minimum rotation problem
+
+[edit|edit source]
+
+
+#### Drawing "lines" in OpenSCAD
+
+[edit|edit source]
+
+
+#### hull sequence or chain
+
+[edit|edit source]
+
+
+#### Fit text into a given area
+
+[edit|edit source]
+
+
+#### Create a mirrored object while retaining the original
+
+[edit|edit source]
+
+
+#### Arrange parts on a spatial array
+
+[edit|edit source]
+
+
+#### Rounding polygons
+
+[edit|edit source]
+
+
+#### Filleting objects
+
+[edit|edit source]
+
+
+#### Computing a bounding box
+
+[edit|edit source]
+
+
+#### Data Heightmap
+
+[edit|edit source]
+
+
+#### Integer from Numeric String (Decimal or Hex)
+
+[edit|edit source]
+
+
+#### Debug Tap function
+
+[edit|edit source]
+
+
+## TUTORIALS
+
+## EXAMPLES
+
+### OpenSCAD User Manual/Example/Strandbeest
+
+#### Abstract
+
+[edit|edit source]
+
+
+#### Target audience / Prerequisites
+
+[edit|edit source]
+
+
+#### Preparation
+
+[edit|edit source]
+
+
+#### Construction by hand
+
+[edit|edit source]
+
+
+#### Geometric Construction Instructions
+
+[edit|edit source]
+
+
+#### Conventions
+
+[edit|edit source]
+
+
+#### Instructions
+
+[edit|edit source]
+
+
+#### given lengths
+
+[edit|edit source]
+
+
+#### Points
+
+[edit|edit source]
+
+
+#### Computer Geometry
+
+[edit|edit source]
+
+
+#### Drawing function
+
+[edit|edit source]
+
+
+#### Implementation
+
+[edit|edit source]
+
+
+#### Leg Module
+
+[edit|edit source]
+
+
+#### Strandbeest
+
+[edit|edit source]
+
+
+#### Source
+
+[edit|edit source]
+
+
+#### Exporting the animation
+
+[edit|edit source]
+
+
+#### Next when working with this example
+
+[edit|edit source]
+
+
+#### Next when building the mechanism with a different method
+
+[edit|edit source]
+
+
+#### Wrong Angle / Missing measurement / Tilt
+
+[edit|edit source]
+
+
+#### Triangle
+
+[edit|edit source]
+
+
+#### Model ready for 3D-Printing
+
+[edit|edit source]
+
+
+#### Using Rod of the same length
+
+[edit|edit source]
+
+
+### OpenSCAD User Manual/Commented Example Projects
+
+#### Dodecahedron
+
+[edit|edit source]
+
+
+#### Icosahedron
+
+[edit|edit source]
+
+
+#### Icosphere
+
+[edit|edit source]
+
+
+#### Half-pyramid
+
+[edit|edit source]
+
+
+#### Bounding Box
+
+[edit|edit source]
+
+
+#### Linear Extrude extended use examples
+
+[edit|edit source]
+
+
+#### Linear Extrude with Scale as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist as an interpolated function
+
+[edit|edit source]
+
+
+#### Linear Extrude with Twist and Scale as interpolated functions
+
+[edit|edit source]
+
+
+#### Rocket
+
+[edit|edit source]
+
+
+#### Horns
+
+[edit|edit source]
+
+
+#### Strandbeest
+
+[edit|edit source]
+
+
+#### Previous
+
+[edit|edit source]
+
+
+#### Next
+
+[edit|edit source]
+
+
