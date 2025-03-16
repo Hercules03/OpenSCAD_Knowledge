@@ -1,0 +1,774 @@
+[
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nobject();\n variable = value;\n operator()   action();\n operator() { action();    action(); }\n operator()   operator() { action(); action(); }\n operator() { operator()   action();\n              operator() { action(); action(); } }\n```\n\nA script in the OpenSCAD language is used to create 2D or 3D models. This script is a free format list of action statements."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ncube(5);\n   x = 4+y;\n   rotate(40) square(5,10);\n   translate([10,5]) { circle(5); square(4); }\n   rotate(60) color(\"red\") { circle(5); square(4); }\n   color(\"blue\") { translate([5,3,0]) sphere(5); rotate([45,0,45]) { cylinder(10); cube([5,6,7]); } }\n```\n\nOperators\nOperators, or transformations, modify the location, color and other properties of objects. Operators use braces '{}' when their scope covers more than one action. More than one operator may be used for the same action or group of actions. Multiple operators are processed Right to Left, that is, the operator closest to the action is processed first. Operators do not end in semicolons ';', but the individual actions they contain do.\nExamples:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n// This is a comment\n  \nmyvar = 10; // The rest of the line is a comment\n  \n/*\n   Multi-line comments\n   can span multiple lines.\n*/\n```\n\nOpenSCAD uses C++-style comments:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ninf = 1e200 * 1e200;\nnan = 0 / 0;\necho(inf,nan);\n```\n\nThe constants inf and nan are not supported as numeric constants by OpenSCAD, even though you can compute numbers that are printed this way by 'echo'. You can define variables with these values by using:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\necho(\"The quick brown fox \\tjumps \\\"over\\\" the lazy dog.\\rThe quick brown fox.\\nThe \\\\lazy\\\\ dog.\");\n  \n result\n   ECHO: \"The quick brown fox     jumps \"over\" the lazy dog.\n   The quick brown fox.\n   The \\lazy\\ dog.\"\n  \n old result\n   ECHO: \"The quick brown fox \\tjumps \\\"over\\\" the lazy dog.\n   The quick brown fox.\\nThe \\\\lazy\\\\ dog.\"\n```\n\nThis behavior is new since OpenSCAD-2011.04. You can upgrade old files using the following sed command: sed 's/\\\\/\\\\\\\\/g' non-escaped.scad > escaped.scad"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nr1 = [0:10];\nr2 = [0.5:2.5:20];\necho(r1); // ECHO: [0: 1: 10]\necho(r2); // ECHO: [0.5: 2.5: 20]\n```\n\nAlthough enclosed in square brackets [] , they are not vectors. They use colons : for separators rather than commas."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nvar = 25;\nxx = 1.25 * cos(50);\ny = 2*xx+var;\nlogic = true;\nMyString = \"This is a string\";\na_vector = [1,2,3];\nrr = a_vector[2];      // member of vector\nrange1 = [-1.5:0.5:3]; // for() loop range\nxx = [0:5];            // alternate for() loop range\n```\n\nOpenSCAD variables are created by a statement with a name or identifier, assignment via an expression and a semicolon. The role of arrays, found in many imperative languages, is handled in OpenSCAD via vectors. Valid identifiers are composed of simple characters and underscores [a-zA-Z0-9_] and do not allow high-ascii or unicode characters."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\na=0;\nif (a==0) \n  {\n a=1; //  before 2015.03 this line would generate a Compile Error\n      //  since 2015.03  no longer an error, but the value a=1 is confined to within the braces {}\n  }\n```\n\nSince version 2015.03, variables can now be assigned in any scope. Note that assignments are valid only within the scope in which they are defined - you are still not allowed to leak values to an outer scope. See Scope of variables for more details."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nExample\n  \n echo(\"Variable a is \", a);                // Variable a is undef\n if (a==undef) {\n   echo(\"Variable a is tested undefined\"); // Variable a is tested undefined\n }\n```\n\nA non assigned variable has the special value undef.\nIt could be tested in conditional expression, and returned by a function."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n// scope 1\n a = 6;                // create a\n echo(a,b);            //                6, undef\n translate([5,0,0]){   // scope 1.1\n   a= 10;\n   b= 16;              // create b\n   echo(a,b);          //              100, 16   a=10; was overridden by later a=100;\n   color(\"blue\") {     // scope 1.1.1\n     echo(a,b);        //              100, 20\n     cube();\n     b=20;\n   }                   // back to 1.1\n   echo(a,b);          //              100, 16\n   a=100;              // override a in 1.1\n }                     // back to 1   \n echo(a,b);            //                6, undef\n color(\"red\"){         // scope 1.2\n   cube();\n   echo(a,b);          //                6, undef\n }                     // back to 1\n echo(a,b);            //                6, undef\n  \n //In this example, scopes 1 and 1.1 are outer scopes to 1.1.1 but 1.2 is not.\n```\n\nEach pair of braces creates a new scope inside the scope where they were used. Since 2015.03, new variables can be created within this new scope. New values can be given to variables that were created in an outer scope. \nThese variables and their values are also available to further inner scopes created within this scope, but are not available to anything outside this scope. Variables still have only the last value assigned within a scope."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n{\n   angle = 45;\n }\n rotate(angle) square(10);\n```\n\nAnonymous scopes are not considered scopes:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n// The value of 'a' reflects only the last set value\n   a = 0;\n   echo(a);  // 5\n   a = 3;\n   echo(a);  // 5\n   a = 5;\n```\n\nBecause OpenSCAD calculates its variable values at compile-time, not run-time, the last variable assignment within a scope applies everywhere in that scope or inner scopes thereof. It may be helpful to think of them as override-able constants rather than as variables."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n[1,2,3]\n   [a,5,b]\n   []\n   [5.643]\n   [\"a\",\"b\",\"string\"]\n   [[1,r],[x,y,z,4,5]]\n   [3, 5, [6,7], [[8,9],[10,[11,12],13], c, \"string\"]\n   [4/3, 6*1.5, cos(60)]\n```\n\nA vector has square brackets, [] enclosing zero or more items (elements or members), separated by commas. A vector can contain vectors, which can contain vectors, etc."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ncube( [width,depth,height] );           // optional spaces shown for clarity\n  translate( [x,y,z] )\n  polygon( [ [x0,y0],  [x1,y1],  [x2,y2] ] );\n```\n\nuse in OpenSCAD:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ncube([10,15,20]);\n  a1 = [1,2,3];\n  a2 = [4,5];\n  a3 = [6,7,8,9];\n  b  = [a1,a2,a3];    // [ [1,2,3], [4,5], [6,7,8,9] ]  note increased nesting depth\n```\n\nVectors are created by writing the list of elements, separated by commas, and enclosed in square brackets. Variables are replaced by their values."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ne[5]           // element no 5 (sixth) at   1st nesting level\ne[5][2]        // element 2 of element 5    2nd nesting level\ne[5][2][0]     // element 0 of 2 of 5       3rd nesting level\ne[5][2][0][1]  // element 1 of 0 of 2 of 5  4th nesting level\n```\n\nElements within vectors are numbered from 0 to n-1 where n is the length returned by len().\nAddress elements within vectors with the following notation:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ne = [ [1], [], [3,4,5], \"string\", \"x\", [[10,11],[12,13,14],[[15,16],[17]]] ];  // length 6\n\naddress       length  element\ne[0]          1       [1]\ne[1]          0       []\ne[5]          3       [ [10,11], [12,13,14], [[15,16],[17]] ]\ne[5][1]       3       [ 12, 13, 14 ]\ne[5][2]       2       [ [15,16], [17] ]\ne[5][2][0]    2       [ 15, 16 ]\ne[5][2][0][1] undef   16\n    \ne[3]          6       \"string\"\ne[3 ][2]      1       \"r\"\n  \ns = [2,0,5]; a = 2;\ns[a]          undef   5\ne[s[a]]       3       [ [10,11], [12,13,14], [[15,16],[17]] ]\n```\n\nexample elements with lengths from len()"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\n\"string\"[2]    //resolves to \"r\"\n```\n\nThe elements (characters) of a string can be accessed:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\ne.x    //equivalent to e[0]\ne.y    //equivalent to e[1]\ne.z    //equivalent to e[2]\n```\n\nThe first three elements of a vector can be accessed with an alternate dot notation:"
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nvector1 = [1,2,3]; vector2 = [4]; vector3 = [5,6];\n new_vector = concat(vector1, vector2, vector3); // [1,2,3,4,5,6]\n  \n string_vector = concat(\"abc\",\"def\");                 // [\"abc\", \"def\"]\n one_string = str(string_vector[0],string_vector[1]); // \"abcdef\"\n```\n\nconcat() combines the elements of 2 or more vectors into a single vector. No change in nesting level is made."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\na = [1,2,3]; echo(len(a));   //  3\n```\n\nvector\nReturns the number of elements at this level.\nSingle values, which are not vectors, raise an error.\nstring\nReturns the number of characters in a string."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nExample that defines a 2D rotation matrix\nmr = [\n     [cos(angle), -sin(angle)],\n     [sin(angle),  cos(angle)]\n    ];\n```\n\nA matrix is a vector of vectors."
+  },
+  {
+    "query": "Give me an example of general in OpenSCAD",
+    "response": "Here's an example of general in OpenSCAD:\n\n```scad\nobj[\"name\"]\n```\n\nRetrieves the named value from the object, for a name that is constant and syntactically suitable for use as an identifier."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ncube(size = [x,y,z], center = true/false);\ncube(size =  x ,     center = true/false);\n```\n\nCreates a cube or rectangular prism (i.e., a \"box\") in the first octant. When center is true, the cube is centered on the origin. Argument names are optional if given in the order shown here."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ndefault values:  cube();   yields:  cube(size = [1, 1, 1], center = false);\n```\n\nsize\nsingle value, cube with all sides this length\n3 value array [x,y,z], rectangular prism with dimensions x, y and z.\ncenter\nfalse (default), 1st (positive) octant, one corner at (0,0,0)\ntrue, cube is centered at (0,0,0)"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent scripts for this example\n cube(size = 18);\n cube(18);\n cube([18,18,18]);\n .\n cube(18,false);\n cube([18,18,18],false);\n cube([18,18,18],center=false);\n cube(size = [18,18,18], center = false);\n cube(center = false,size = [18,18,18] );\n```\n\ndefault values:  cube();   yields:  cube(size = [1, 1, 1], center = false);"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent scripts for this example\n cube([18,28,8],true);\n box=[18,28,8];cube(box,true);\n```\n\nequivalent scripts for this example\n cube(size = 18);\n cube(18);\n cube([18,18,18]);\n .\n cube(18,false);\n cube([18,18,18],false);\n cube([18,18,18],center=false);\n cube(size = [18,18,18], center = false);\n cube(center = false,size = [18,18,18] );"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ndefault values:  sphere();   yields:   sphere($fn = 0, $fa = 12, $fs = 2, r = 1);\n```\n\nr\nRadius.  This is the radius of the sphere.  The resolution of the sphere is based on the size of the sphere and the $fa, $fs and $fn variables. For more information on these special variables look at: OpenSCAD_User_Manual/Other_Language_Features\nd\nDiameter.  This is the diameter of the sphere.\n$fa\nFragment angle in degrees\n$fs\nFragment size in mm\n$fn\nResolution"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nsphere(r = 1);\nsphere(r = 5);\nsphere(r = 10);\nsphere(d = 2);\nsphere(d = 10);\nsphere(d = 20);\n```\n\nUsage Examples"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\n// this creates a high resolution sphere with a 2mm radius\nsphere(2, $fn=100);\n```\n\nsphere(r = 1);\nsphere(r = 5);\nsphere(r = 10);\nsphere(d = 2);\nsphere(d = 10);\nsphere(d = 20);"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\n// also creates a 2mm high resolution sphere but this one \n// does not have as many small triangles on the poles of the sphere\nsphere(2, $fa=5, $fs=0.1);\n```\n\n// this creates a high resolution sphere with a 2mm radius\nsphere(2, $fn=100);"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ncylinder(h = height, r1 = BottomRadius, r2 = TopRadius, center = true/false);\n```\n\nParameter names are optional if given in the order shown here. If a parameter is named, all following parameters must also be named."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ndefaults: cylinder();  yields: cylinder($fn = 0, $fa = 12, $fs = 2, h = 1, r1 = 1, r2 = 1, center = false);\n```\n\nh : height of the cylinder or cone\nr  : radius of cylinder. r1 = r2 = r.\nr1 : radius, bottom of cone.\nr2 : radius, top of cone.\nd  : diameter of cylinder. r1 = r2 = d / 2. [Note: Requires version 2014.03]\nd1 : diameter, bottom of cone. r1 = d1 / 2. [Note: Requires version 2014.03]\nd2 : diameter, top of cone. r2 = d2 / 2. [Note: Requires version 2014.03]\ncenter\nfalse (default), z ranges from 0 to h\ntrue,  z ranges from -h/2 to +h/2\n$fa : minimum angle (in degrees) of each fragment.\n$fs : minimum circumferential length of each fragment.\n$fn : fixed number of fragments in 360 degrees. Values of 3 or more override $fa and $fs\n$fa, $fs and $fn must be named parameters. click here for more details,."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent scripts\n cylinder(h=15, r1=9.5, r2=19.5, center=false);\n cylinder(  15,    9.5,    19.5, false);\n cylinder(  15,    9.5,    19.5);\n cylinder(  15,    9.5, d2=39  );\n cylinder(  15, d1=19,  d2=39  );\n cylinder(  15, d1=19,  r2=19.5);\n```\n\ndefaults: cylinder();  yields: cylinder($fn = 0, $fa = 12, $fs = 2, h = 1, r1 = 1, r2 = 1, center = false);"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent scripts\n cylinder(h=15, r1=10, r2=0, center=true);\n cylinder(  15,    10,    0,        true);\n cylinder(h=15, d1=20, d2=0, center=true);\n```\n\nequivalent scripts\n cylinder(h=15, r1=9.5, r2=19.5, center=false);\n cylinder(  15,    9.5,    19.5, false);\n cylinder(  15,    9.5,    19.5);\n cylinder(  15,    9.5, d2=39  );\n cylinder(  15, d1=19,  d2=39  );\n cylinder(  15, d1=19,  r2=19.5);"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent scripts\n cylinder(h=20, r=10, center=true);\n cylinder(  20,   10, 10,true);\n cylinder(  20, d=20, center=true);\n cylinder(  20,r1=10, d2=20, center=true);\n cylinder(  20,r1=10, d2=2*10, center=true);\n```\n\ncenter = false\n\t\t\n\t\t\n\t\t\t\n\t\t\tcenter = true"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nscripts for these examples\n cylinder(20,20,20,$fn=3);\n cylinder(20,20,00,$fn=4);\n cylinder(20,20,10,$fn=4);\n```\n\nHowever, use of small values can produce some interesting non circular objects. A few examples are show here:"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nscript for this example\n poly_n = 6;\n color(\"blue\") translate([0, 0, 0.02]) linear_extrude(0.1) circle(10, $fn=poly_n);\n color(\"green\") translate([0, 0, 0.01]) linear_extrude(0.1) circle(10, $fn=360);\n color(\"purple\") linear_extrude(0.1) circle(10/cos(180/poly_n), $fn=poly_n);\n```\n\nUsing cylinder() with difference() to place holes in objects creates undersized holes. This is because circular paths are approximated with polygons inscribed within in a circle. The points of the polygon are on the circle, but straight lines between are inside. To have all of the hole larger than the true circle, the polygon must lie wholly outside of the circle (circumscribed). Modules for circumscribed holes"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\npolyhedron( points = [ [X0, Y0, Z0], [X1, Y1, Z1], ... ], triangles = [ [P0, P1, P2], ... ], convexity = N);   // before 2014.03\npolyhedron( points = [ [X0, Y0, Z0], [X1, Y1, Z1], ... ], faces = [ [P0, P1, P2, P3, ...], ... ], convexity = N);   // 2014.03 & later\n```\n\nA polyhedron is the most general 3D primitive solid. It can be used to create any regular or irregular shape including those with concave as well as convex features. Curved surfaces are approximated by a series of flat surfaces."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\ndefault values: polyhedron(); yields: polyhedron(points = undef, faces = undef, convexity = 1);\n```\n\nconvexity\nInteger. The convexity parameter specifies the maximum number of faces a ray intersecting the object might penetrate. This parameter is needed only for correct display of the object in OpenCSG preview mode. It has no effect on the polyhedron rendering. For display problems, setting it to 10 should work fine for most cases."
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nCubePoints = [\n  [  0,  0,  0 ],  //0\n  [ 10,  0,  0 ],  //1\n  [ 10,  7,  0 ],  //2\n  [  0,  7,  0 ],  //3\n  [  0,  0,  5 ],  //4\n  [ 10,  0,  5 ],  //5\n  [ 10,  7,  5 ],  //6\n  [  0,  7,  5 ]]; //7\n  \nCubeFaces = [\n  [0,1,2,3],  // bottom\n  [4,5,1,0],  // front\n  [7,6,5,4],  // top\n  [5,6,2,1],  // right\n  [6,7,3,2],  // back\n  [7,4,0,3]]; // left\n  \npolyhedron( CubePoints, CubeFaces );\n```\n\nunfolded cube faces"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nequivalent descriptions of the bottom face\n  [0,1,2,3],\n  [0,1,2,3,0],\n  [1,2,3,0],\n  [2,3,0,1],\n  [3,0,1,2],\n  [0,1,2],[2,3,0],   // 2 triangles with no overlap\n  [1,2,3],[3,0,1],\n  [1,2,3],[0,1,3],\n```\n\nCubePoints = [\n  [  0,  0,  0 ],  //0\n  [ 10,  0,  0 ],  //1\n  [ 10,  7,  0 ],  //2\n  [  0,  7,  0 ],  //3\n  [  0,  0,  5 ],  //4\n  [ 10,  0,  5 ],  //5\n  [ 10,  7,  5 ],  //6\n  [  0,  7,  5 ]]; //7\n  \nCubeFaces = [\n  [0,1,2,3],  // bottom\n  [4,5,1,0],  // front\n  [7,6,5,4],  // top\n  [5,6,2,1],  // right\n  [6,7,3,2],  // back\n  [7,4,0,3]]; // left\n  \npolyhedron( CubePoints, CubeFaces );"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\npolyhedron(\n  points=[ [10,10,0],[10,-10,0],[-10,-10,0],[-10,10,0], // the four points at base\n           [0,0,10]  ],                                 // the apex point \n  faces=[ [0,1,4],[1,2,4],[2,3,4],[3,0,4],              // each triangle side\n              [1,0,3],[2,1,3] ]                         // two triangles for square base\n );\n```\n\nA simple polyhedron, square base pyramid"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nmodule prism(l, w, h){\n      polyhedron(//pt 0        1        2        3        4        5\n              points=[[0,0,0], [l,0,0], [l,w,0], [0,w,0], [0,w,h], [l,w,h]],\n              faces=[[0,1,2,3],[5,4,3,2],[0,4,5,1],[0,3,4],[5,2,1]]\n              );\n      \n      // preview unfolded (do not include in your function\n      z = 0.08;\n      separation = 2;\n      border = .2;\n      translate([0,w+separation,0])\n          cube([l,w,z]);\n      translate([0,w+separation+w+border,0])\n          cube([l,h,z]);\n      translate([0,w+separation+w+border+h+border,0])\n          cube([l,sqrt(w*w+h*h),z]);\n      translate([l+border,w+separation,0])\n          polyhedron(//pt 0       1       2        3       4       5\n                  points=[[0,0,0],[h,w,0],[0,w,0], [0,0,z],[h,w,z],[0,w,z]],\n                  faces=[[0,1,2], [3,5,4], [0,3,4,1], [1,4,5,2], [2,5,3,0]]\n                  );\n      translate([0-border,w+separation,0])\n          polyhedron(//pt 0       1         2        3       4         5\n                  points=[[0,0,0],[0-h,w,0],[0,w,0], [0,0,z],[0-h,w,z],[0,w,z]],\n                  faces=[[1,0,2],[5,3,4],[0,1,4,3],[1,2,5,4],[2,0,3,5]]\n                  );\n      }\n  \n  prism(10, 5, 3);\n```\n\nA polyhedron triangular prism"
+  },
+  {
+    "query": "Give me an example of primitive solids in OpenSCAD",
+    "response": "Here's an example of primitive solids in OpenSCAD:\n\n```scad\nCubeFaces = [\n/* [0,1,2,3],  // bottom\n   [4,5,1,0],  // front */\n   [7,6,5,4],  // top\n/* [5,6,2,1],  // right\n   [6,7,3,2],  // back */\n   [7,4,0,3]]; // left\n```\n\nexample 1 showing only 2 faces"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nsquare(size = [x, y], center = true/false);\nsquare(size =  x    , center = true/false);\n```\n\nCreates a square or rectangle in the first quadrant. When center is true the square is centered on the origin. Argument names are optional if given in the order shown here."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ndefault values:  square();   yields:  square(size = [1, 1], center = false);\n```\n\nsize\nsingle value, square with both sides this length\n2 value array [x,y], rectangle with dimensions x and y\ncenter\nfalse (default), 1st (positive) quadrant, one corner at (0,0)\ntrue, square is centered at (0,0)"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nequivalent scripts for this example\n square(size = 10);\n square(10);\n square([10,10]);\n .\n square(10,false);\n square([10,10],false);\n square([10,10],center=false);\n square(size = [10, 10], center = false);\n square(center = false,size = [10, 10] );\n```\n\ndefault values:  square();   yields:  square(size = [1, 1], center = false);"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nequivalent scripts for this example\n square([20,10],true);\n a=[20,10];square(a,true);\n```\n\nequivalent scripts for this example\n square(size = 10);\n square(10);\n square([10,10]);\n .\n square(10,false);\n square([10,10],false);\n square([10,10],center=false);\n square(size = [10, 10], center = false);\n square(center = false,size = [10, 10] );"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ncircle(r=radius | d=diameter);\n```\n\nCreates a circle at the origin. All parameters, except r, must be named."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nscale([1/100, 1/100, 1/100]) circle(200); // create a high resolution circle with a radius of 2.\ncircle(2, $fn=50);                        // Another way.\n```\n\nFor a small, high resolution circle you can make a large circle, then scale it down, or you could set $fn or other special variables. Note: These examples exceed the resolution of a 3d printer as well as of the display screen."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ndefaults:  circle(); yields:  circle($fn = 0, $fa = 12, $fs = 2, r = 1);\n```\n\nd   : circle diameter (only available in versions later than 2014.03).\n$fa : minimum angle (in degrees) of each fragment.\n$fs : minimum circumferential length of each fragment.\n$fn : fixed number of fragments in 360 degrees. Values of 3 or more override $fa and $fs.\nIf they are used, $fa, $fs and $fn must be named parameters. click here for more details,."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ncircle(10);\n circle(r=10);\n circle(d=20);\n circle(d=2+9*2);\n```\n\nEquivalent scripts for this example"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nequivalent scripts for this example\n resize([30,10])circle(d=20);\n scale([1.5,.5])circle(d=20);\n```\n\nAn ellipse can be created from a circle by using either scale() or resize() to make the x and y dimensions unequal.\nSee OpenSCAD User Manual/Transformations"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ncircle(r=1, $fn=4);\n```\n\nA regular polygon of 3 or more sides can be created by using circle() with $fn set to the number of sides. The following two pieces of code are equivalent."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nmodule regular_polygon(order = 4, r=1){\n     angles=[ for (i = [0:order-1]) i*(360/order) ];\n     coords=[ for (th=angles) [r*cos(th), r*sin(th)] ];\n     polygon(coords);\n }\n regular_polygon();\n```\n\ncircle(r=1, $fn=4);"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nscript for these examples\n translate([-42,  0]){circle(20,$fn=3);%circle(20,$fn=90);}\n translate([  0,  0]) circle(20,$fn=4);\n translate([ 42,  0]) circle(20,$fn=5);\n translate([-42,-42]) circle(20,$fn=6);\n translate([  0,-42]) circle(20,$fn=8);\n translate([ 42,-42]) circle(20,$fn=12);\n \n color(\"black\"){\n     translate([-42,  0,1])text(\"3\",7,,center);\n     translate([  0,  0,1])text(\"4\",7,,center);\n     translate([ 42,  0,1])text(\"5\",7,,center);\n     translate([-42,-42,1])text(\"6\",7,,center);\n     translate([  0,-42,1])text(\"8\",7,,center);\n     translate([ 42,-42,1])text(\"12\",7,,center);\n }\n```\n\nThese result in the following shapes, where the polygon is inscribed within the circle with all sides (and angles) equal. One corner points to the positive x direction. For irregular shapes see the polygon primitive below."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\npolygon(points = [ [x, y], ... ], paths = [ [p1, p2, p3..], ...], convexity = N);\n```\n\nThe function polygon() creates a multiple sided shape from a list of x,y coordinates. A polygon is the most powerful 2D object. It can create anything that circle and squares can, as well as much more. This includes irregular shapes with both concave and convex edges. In addition it can place holes within that shape."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\ndefaults:   polygon();  yields:  polygon(points = undef, paths = undef, convexity = 1);\n```\n\nconvexity\nInteger number of \"inward\" curves, ie. expected path crossings of an arbitrary line through the polygon. See below."
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\n//example polygon with multiple holes\na0 = [[0,0],[100,0],[130,50],[30,50]];     // main\nb0 = [1,0,3,2];\na1 = [[20,20],[40,20],[30,30]];            // hole 1\nb1 = [4,5,6];\na2 = [[50,20],[60,20],[40,30]];            // hole 2\nb2 = [7,8,9];\na3 = [[65,10],[80,10],[80,40],[65,40]];    // hole 3\nb3 = [10,11,12,13];\na4 = [[98,10],[115,40],[85,40],[85,10]];   // hole 4\nb4 = [14,15,16,17];\na  = concat (a0,a1,a2,a3,a4);\nb  = [b0,b1,b2,b3,b4];\npolygon(a,b);\n      //alternate \npolygon(a,[b0,b1,b2,b3,b4]);\n```\n\n[Note: Requires version 2015.03] (for use of concat())"
+  },
+  {
+    "query": "Give me an example of 2d primitives in OpenSCAD",
+    "response": "Here's an example of 2d primitives in OpenSCAD:\n\n```scad\nlinear_extrude(height = 5, center = true, convexity = 10)\n\t\timport_dxf(file = \"example009.dxf\", layer = \"plate\");\n```\n\nRead a DXF file and create a 2D shape."
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nUsage Example:\nscale(v = [x, y, z]) { ... }\n```\n\nScales its child elements using the specified vector. The argument name is optional."
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(a=[ax,ay,az]) {...}\n```\n\nThe 'a' argument (deg_a) can be an array, as expressed in the later usage above; when deg_a is an array, the 'v' argument is ignored. Where 'a' specifies multiple axes then the rotation is applied in the following order: x then y then z. That means the code:"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(a=[0,0,az]) rotate(a=[0,ay,0]) rotate(a=[ax,0,0]) {...}\n```\n\nis equivalent to:"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(a=[0,180,0]) { ... }\n```\n\nFor example, to flip an object upside-down, you can rotate your object 180 degrees around the 'y' axis."
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate([0,180,0]) { ... }\n```\n\nThis is frequently simplified to"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(a=180, v=[0,1,0]) { ... }\n```\n\nWhen specifying a single axis the 'v' argument allows you to specify which axis is the basis for rotation. For example, the equivalent to the above, to rotate just around y"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(a=45, v=[1,1,0]) { ... }\n```\n\nWhen specifying a single axis, 'v' is a vector defining an arbitrary axis for rotation; this is different from the multiple axis above. For example, rotate your object 45 degrees around the axis defined by the vector [1,1,0],"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate(45) square(10);\n```\n\nRotate with a single scalar argument rotates around the Z axis. This is useful in 2D contexts where that is the only axis for rotation. For example:"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate([a, b, c]) { ... };\n```\n\nFor the case of:"
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nExample:\ntranslate(v = [x, y, z]) { ... }\n```\n\nTranslates (moves) its child elements along the specified vector. The argument name is optional."
+  },
+  {
+    "query": "Give me an example of transformations in OpenSCAD",
+    "response": "Here's an example of transformations in OpenSCAD:\n\n```scad\nrotate([0,0,10]) cube([3,2,1]);\nmirror([1,0,0]) translate([1,0,0]) rotate([0,0,10]) cube([3,2,1]);\n```\n\nhand(); // originalmirror([1,0,0]) hand();\n\t\t\n\t\t\n\t\t\t\n\t\t\thand(); // originalmirror([1,1,0]) hand();\n\t\t\n\t\t\n\t\t\t\n\t\t\thand(); // originalmirror([1,1,1]) hand();"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, twist = 0)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\n0° of Twist"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, twist = -100)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\n-100° of Twist"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, twist = 100)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\n100° of Twist"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, twist = -500)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\n-500° of Twist"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, twist = -500)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\ncenter = true"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = false, convexity = 10, twist = -500)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\ncenter = false"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = false, convexity = 10, twist = 360, slices = 100)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\nThe slices parameter defines the number of intermediate points along the Z axis of the extrusion. Its default increases with the value of twist. Explicitly setting slices may improve the output refinement. Additional the segments parameter adds vertices (points) to the extruded polygon resulting in smoother twisted geometries. Segments need to be a multiple of the polygon's fragments to have an effect (6 or 9..  for a circle($fn=3), 8,12.. for a square() )."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = false, convexity = 10, twist = 360, $fn = 100)\ntranslate([2, 0, 0])\ncircle(r = 1);\n```\n\nThe special variables $fn, $fs and $fa can also be used to improve the output. If slices is not defined, its value is taken from the defined $fn value."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, scale=3)\n translate([2, 0, 0])\n circle(r = 1);\n```\n\nScales the 2D shape by this value over the height of the extrusion. Scale can be a scalar or a vector:"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true, convexity = 10, scale=[1,5], $fn=100)\n translate([2, 0, 0])\n circle(r = 1);\n```\n\nlinear_extrude(height = 10, center = true, convexity = 10, scale=3)\n translate([2, 0, 0])\n circle(r = 1);"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height=10, scale=[1,0.1], slices=20, twist=0)\n polygon(points=[[0,0],[20,10],[20,-10]]);\n```\n\nNote that if scale is a vector, the resulting side walls may be nonplanar.  Use twist=0 and the slices parameter to avoid asymmetry."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nlinear_extrude(height = 10, center = true)\n import(\"knight.svg\");\n```\n\nA common usage of this function is to import a 2D svg"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nrotate_extrude(convexity = 10)\n    translate([2, 0, 0])\n        circle(r = 1);\n```\n\nA simple torus can be constructed using a rotational extrude."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nrotate_extrude(convexity = 10)\n    translate([2, 0, 0])\n        circle(r = 1, $fn = 100);\n```\n\nIncreasing the number of fragments composing the 2D shape improves the quality of the mesh, but takes longer to render."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nrotate_extrude(convexity = 10, $fn = 100)\n    translate([2, 0, 0])\n        circle(r = 1, $fn = 100);\n```\n\nThe number of fragments used by the extrusion can also be increased."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\neps = 0.01;\ntranslate([eps, 60, 0])\n    rotate_extrude(angle=270, convexity=10)\n        translate([40, 0]) circle(10);\nrotate_extrude(angle=90, convexity=10)\n    translate([20, 0]) circle(10);\ntranslate([20, eps, 0])\n    rotate([90, 0, 0]) cylinder(r=10, h=80+eps);\n```\n\nOpenSCAD - a hook"
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nrotate([90,0,0])        polygon( points=[[0,0],[2,1],[1,2],[1,3],[3,4],[0,5]] );\n```\n\nHere is a simple polygon and its 200 step rotational extrusion. (Note it has been rotated 90 degrees to show how the rotation appears; the rotate_extrude() needs it flat)."
+  },
+  {
+    "query": "Give me an example of extrusion in OpenSCAD",
+    "response": "Here's an example of extrusion in OpenSCAD:\n\n```scad\nrotate_extrude($fn=200) polygon( points=[[0,0],[2,1],[1,2],[1,3],[3,4],[0,5]] );\n```\n\nrotate([90,0,0])        polygon( points=[[0,0],[2,1],[1,2],[1,3],[3,4],[0,5]] );"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor(variable = [start : increment : end])\n for(variable = [start : end])\n for(variable = [vector])\n for(variable = object)\n```\n\nEvaluate each value in a range or vector, or each name in an object, applying it to the following Action."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor (a =[3:5])echo(a);     // 3 4 5\n for (a =[3:0]){echo(a);}   // 0 1 2 3         start > end is invalid, deprecated by 2015.3\n for (a =[3:0.5:5])echo(a); // 3 3.5 4 4.5 5\n for (a =[0:2:5])echo(a);   // 0 2 4           a never equals end \n for (a =[3:-2:-1])echo(a); // 3 1 -1          negative increment requires 2015.3\n                                               be sure end < start\n```\n\nstart - initial value\nincrement or step - amount to increase the value, optional, default = 1\nend - stop when next value would be past end"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor (a =[3,4,1,5])echo(a); // 3 4 1 5\n for (a =[0.3,PI,1,99]){echo(a);}    // 0.3 3.14159 1 99\n x1=2; x2=8; x3=5.5;\n for (a =[x1,x2,x3]){echo(a);} // 2 8 5.5 \n for (a =[[1,2],6,\"s\",[[3,4],[5,6]]])echo(a);  // [1,2] 6 \"s\" [[3,4],[5,6]]\n```\n\nThe Action is evaluated for each element of the vector."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nanimals = [\"elephants\", \"snakes\", \"tigers\", \"giraffes\"];\n   for(animal = animals)\n     echo(str(\"I've been to the zoo and saw \", animal));\n // \"I've been to the zoo and saw elephants\", for each animal\n```\n\nThe vector can be described elsewhere, like 'for each' in other languages."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\ntm = textmetrics(\"Hello, World!\");\n   for (name = tm) echo(name, tm[name]);\n```\n\nThe Action is evaluated for the name of each element of the object, in an unspecified order."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor (i=[0:3])\n   translate([i*10,0,0])\n     cube(i+1);\n```\n\nRemember this is not an iterative language, the for() does not loop in the programmatic sense, it builds a tree of objects one branch for each item in the range/vector, inside each branch  the 'variable' is a specific and separate instantiation or scope."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\ngroup() {\n       group() {\n               multmatrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]) {\n                       cube(size = [1, 1, 1], center = false);\n               }\n               multmatrix([[1, 0, 0, 10], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]) {\n                       cube(size = [2, 2, 2], center = false);\n               }\n               multmatrix([[1, 0, 0, 20], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]) {\n                       cube(size = [3, 3, 3], center = false);\n               }\n               multmatrix([[1, 0, 0, 30], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]) {\n                       cube(size = [4, 4, 4], center = false);\n               }\n       }\n}\n```\n\nProduces:\n[See Design/Display-CSG-Tree menu]"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor(z=[-180:45:+180])\n  for(x=[10:5:50])\n    rotate([0,0,z]) translate([x,0,0]) cube(1);\n```\n\nWhile it is reasonable to nest multiple for() statements such as:"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nfor ( variable1 = <range or vector> , variable2 = <range or vector> ) <do something using both variables>\n```\n\ninstead, all ranges/vectors can be included in the same for() operator."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nexample for() nested 3 deep\n \n color_vec = [\"black\",\"red\",\"blue\",\"green\",\"pink\",\"purple\"];\n for (x = [-20:10:20] )\n for (y = [0:4] )color(color_vec[y])\n for (z = [0,4,10] )\n     {translate([x,y*5-10,z])cube();}\n \n shorthand nesting for same result\n \n color_vec = [\"black\",\"red\",\"blue\",\"green\",\"pink\",\"purple\"];\n for (x = [-20:10:20],\n y = [0:4],\n z = [0,4,10] )\n     translate([x,y*5-10,z]){color(color_vec[y])cube();}\n```\n\nfor() loops nested 3 deep"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nexample 1 - iteration over a vector of vectors (rotation)\n  \n for(i = [ [  0,  0,   0],\n           [ 10, 20, 300],\n           [200, 40,  57],\n           [ 20, 88,  57] ])\n{\n   rotate(i)\n   cube([100, 20, 20], center = true);\n}\n```\n\nexample 1 for() loop vector of vectors (rotation)"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nexample 2 - iteration over a vector of vectors (translation)\n  \nfor(i = [ [ 0,  0,  0],\n          [10, 12, 10],\n          [20, 24, 20],\n          [30, 36, 30],\n          [20, 48, 40],\n          [10, 60, 50] ])\n{\n   translate(i)\n   cube([50, 15, 10], center = true);\n}\n```\n\nexample 2 for() loop vector of vectors (translation)"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nexample 3 - iteration over a vector of vectors\nfor(i = [ [[ 0,  0,  0], 20],\n          [[10, 12, 10], 50],\n          [[20, 24, 20], 70],\n          [[30, 36, 30], 10],\n          [[20, 48, 40], 30],\n          [[10, 60, 50], 40] ])\n{\n  translate([i[0][0], 2*i[0][1], 0])\n  cube([10, 15, i[1]]);\n}\n```\n\nexample 3 for() loop vector of vectors"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nif (test) scope1\nif (test){scope1}\nif (test) scope1  else  scope2\nif (test){scope1} else {scope2}\n```\n\nREALLY IMPORTANT. You can't change the value of Variables. If you have an assignment inside brackets, it creates a new variable that is lost as soon as you exit that scope."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nif (b==a)  cube(4);\nif (b<a)  {cube(4); cylinder(6);}\nif (b&&a) {cube(4); cylinder(6);}\nif (b!=a)  cube(4); else cylinder(3);\nif (b)    {cube(4); cylinder(6);} else {cylinder(10,5,5);} \nif (!true){cube(4); cylinder(6);} else  cylinder(10,5,5); \nif (x>y)   cube(1, center=false); else {cube(size = 2, center = true);}\nif (a==4) {}                      else  echo(\"a is not 4\");\nif ((b<5)&&(a>8))  {cube(4);}     else {cylinder(3);}\nif (b<5&&a>8)       cube(4);      else  cylinder(3);\n```\n\ntest: Usually a boolean expression, but can be any value or variable.\n See here for true or false state of values.\nSee here for boolean and logical operators\nDo not confuse the assignment operator '=' with the equal operator '=='\nscope1: one or more actions to take when test is true.\nscope2: one or more actions to take when test is false."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nif (test1) \n {\n   scope1 if (test2) {scope2.1}\n          else {scope2.2}\n }\n else\n{\n  scope2 if (test3) {scope3.1}\n         else {scope3.2}\n}\n```\n\nThe scopes of both the if() portion and the else portion, can in turn contain if() statements. This nesting can be to any depth."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nif (test1)\n   if (test2) {scope2.1}\n   else {scope2.2}\n else\n   if (test3) {scope3.1}\n   else {scope3.2}\n```\n\nWhen scope1 and scope2 contain only the if() statement, the outer sets of braces can be removed."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nif((k<8)&&(m>1)) cube(10);\nelse if(y==6)   {sphere(6);cube(10);}\nelse if(y==7)    color(\"blue\")sphere(5);\nelse if(k+m!=8) {cylinder(15,5,0);sphere(8);}\nelse             color(\"green\"){cylinder(12,5,0);sphere(8);}\n```\n\nNote that else and if are two separate words. When working down the chain of tests, the first true uses its scope. All further tests are skipped."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\na =   test ? TrueValue : FalseValue ;\n echo( test ? TrueValue : FalseValue );\n```\n\nA function that uses a test to determine which of 2 values to return."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\na=1; b=2; c= a==b ? 4 : 5 ;                  //  5\n a=1; b=2; c= a==b ? \"a==b\" : \"a!=b\" ;        //  \"a!=b\"\n  \n TrueValue = true; FalseValue = false;\n a=5; test = a==1;\n echo( test ? TrueValue : FalseValue );       // false\n  \n L = 75; R = 2; test = (L/R)>25;\n TrueValue =  [test,L,R,L/R,cos(30)];\n FalseValue = [test,L,R,sin(15)];\n a1 = test ? TrueValue : FalseValue ;         // [true, 75, 2, 37.5, 0.866025]\n```\n\nThis works like the ?: operator from the family of C-like programming languages."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\nSome forms of tail-recursion elimination are supported.\n```\n\na=1; b=2; c= a==b ? 4 : 5 ;                  //  5\n a=1; b=2; c= a==b ? \"a==b\" : \"a!=b\" ;        //  \"a!=b\"\n  \n TrueValue = true; FalseValue = false;\n a=5; test = a==1;\n echo( test ? TrueValue : FalseValue );       // false\n  \n L = 75; R = 2; test = (L/R)>25;\n TrueValue =  [test,L,R,L/R,cos(30)];\n FalseValue = [test,L,R,sin(15)];\n a1 = test ? TrueValue : FalseValue ;         // [true, 75, 2, 37.5, 0.866025]"
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\n// recursion - find the sum of the values in a vector (array) by calling itself\n // from the start (or s'th element) to the i'th element - remember elements are zero based\n\n function sumv(v, i, s = 0) = (i == s ? v[i] : v[i] + sumv(v, i-1, s));\n \n vec=[ 10, 20, 30, 40 ];\n echo(\"sum vec=\", sumv(vec, 2, 1)); // calculates 20+30=50\n```\n\nRecursive function calls are supported. Using the Conditional \"... ? ... : ... \" it's possible to ensure the recursion is terminated.\nNote: There is a built-in recursion limit to prevent an application crash. If the limit is hit, the function returns undef."
+  },
+  {
+    "query": "Give me an example of conditional and iterator functions in OpenSCAD",
+    "response": "Here's an example of conditional and iterator functions in OpenSCAD:\n\n```scad\n// find the maximum value in a vector\nfunction maxv(v, m=-999999999999, i=0) = \n    (i == len(v) ) \n    ?     m \n    :     (m > v[i]) \n          ?    maxv(v, m, i+1) \n          :    maxv(v, v[i], i+1);\n\nv=[7,3,9,3,5,6];\necho(\"max\",maxv(v));   // ECHO: \"max\", 9\n```\n\nMultiple nested conditionals can become difficult to understand.\nFormatting them like multi-line indented \"if/else\" statements is clearer."
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\natan2(5.0,-5.0);     //result: 135 degrees. atan() would give -45\natan2(y,x);          //angle between (1,0) and (x,y) = angle around z-axis\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nabs(-5.0);  returns 5.0\nabs(0);     returns 0.0\nabs(8.0);   returns 8.0\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(ceil(4.4),ceil(-4.4));     // produces ECHO: 5, -4\n```\n\nSee: Ceil Function"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(concat(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"));          // produces ECHO: [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\necho(concat([\"a\",\"b\",\"c\"],[\"d\",\"e\",\"f\"]));      // produces ECHO: [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\necho(concat(1,2,3,4,5,6));                      // produces ECHO: [1, 2, 3, 4, 5, 6]\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(concat([ [1],[2] ], [ [3] ]));             // produces ECHO: [[1], [2], [3]]\n```\n\nVector of vectors"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\npolygon(concat([[0,0],[0,5],[5,5]], [[5,0]]));\n```\n\nNote: All vectors passed to the function  lose one nesting level. When adding something like a single element [x, y, z] tuples (which are vectors, too), the tuple needs to be enclosed in a vector (i.e. an extra set of brackets) before the concatenation. in the exmple below, a fourth point is added to the polygon path, which used to resemble a triangle, making it a square now:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(concat([1,2,3],[4,5,6]));                   // produces ECHO: [1, 2, 3, 4, 5, 6]\necho(concat(\"abc\",\"def\"));                       // produces ECHO: [\"abc\", \"def\"]\necho(str(\"abc\",\"def\"));                          // produces ECHO: \"abcdef\"\n```\n\nContrast with strings"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(cross([2, 3, 4], [5, 6, 7]));     // produces ECHO: [-3, 6, -3]\necho(cross([2, 1, -3], [0, 4, 5]));    // produces ECHO: [17, -10, 8]\necho(cross([2, 1], [0, 4]));           // produces ECHO: 8\necho(cross([1, -3], [4, 5]));          // produces ECHO: 17\necho(cross([2, 1, -3], [4, 5]));       // produces ECHO: undef\necho(cross([2, 3, 4], \"5\"));           // produces ECHO: undef\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(exp(1),exp(ln(3)*4));    // produces ECHO: 2.71828, 81\n```\n\nMathematical exp function. Returns the base-e exponential function of x, which is the number e raised to the power x. See: Exponent"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(floor(4.4),floor(-4.4));    // produces ECHO: 4, -5\n```\n\nSee: Floor Function"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nstr1=\"abcdef\"; len_str1=len(str1);\necho(str1,len_str1);\n\na=6; len_a=len(a);\necho(a,len_a);\n\narray1=[1,2,3,4,5,6,7,8]; len_array1=len(array1);\necho(array1,len_array1);\n\narray2=[[0,0],[0,1],[1,0],[1,1]]; len_array2=len(array2);\necho(array2,len_array2);\n\nlen_array2_2=len(array2[2]);\necho(array2[2],len_array2_2);\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nWARNING: len() parameter could not be converted in file , line 4\nECHO: \"abcdef\", 6\nECHO: 6, undef\nECHO: [1, 2, 3, 4, 5, 6, 7, 8], 8\nECHO: [[0, 0], [0, 1], [1, 0], [1, 1]], 4\nECHO: [1, 0], 2\n```\n\nstr1=\"abcdef\"; len_str1=len(str1);\necho(str1,len_str1);\n\na=6; len_a=len(a);\necho(a,len_a);\n\narray1=[1,2,3,4,5,6,7,8]; len_array1=len(array1);\necho(array1,len_array1);\n\narray2=[[0,0],[0,1],[1,0],[1,1]]; len_array2=len(array2);\necho(array2,len_array2);\n\nlen_array2_2=len(array2[2]);\necho(array2[2],len_array2_2);"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nstr2=\"4711\";\nfor (i=[0:len(str2)-1])\n\techo(str(\"digit \",i+1,\"  :  \",str2[i]));\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nECHO: \"digit 1  :  4\"\nECHO: \"digit 2  :  7\"\nECHO: \"digit 3  :  1\"\nECHO: \"digit 4  :  1\"\n```\n\nstr2=\"4711\";\nfor (i=[0:len(str2)-1])\n\techo(str(\"digit \",i+1,\"  :  \",str2[i]));"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nmodule doIt(size) {\n\tif (len(size) == undef) {\n\t\t// size is a number, use it for x,y & z. (or could be undef)\n\t\tdo([size,size,size]);\n\t} else { \n\t\t// size is a vector, (could be a string but that would be stupid)\n\t\tdo(size);\n\t}\n }\n \ndoIt(5);\t// equivalent to [5,5,5]\ndoIt([5,5,5]);\t// similar to cube(5) v's cube([5,5,5])\n```\n\nFor example"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nlet (var1 = value1, var2 = f(var1), var3 = g(var1, var2)) expression\n```\n\nSequential assignment of variables inside an expression. The following expression is evaluated in context of the let assignments and can use the variables. This is mainly useful to make complicated expressions more readable by assigning interim results to variables."
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(let(a = 135, s = sin(a), c = cos(a)) [ s, c ]); // ECHO: [0.707107, -0.707107]\n```\n\nUsage example:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nmax(n,n{,n}...)\nmax(vector)\n```\n\nReturns the maximum of the parameters. If a single vector is given as parameter, returns the maximum element of that vector."
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nmax(3.0,5.0)\nmax(8.0,3.0,4.0,5.0)\nmax([8,3,4,5])\n```\n\nUsage example:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n5\n8\n8\n```\n\nmax(3.0,5.0)\nmax(8.0,3.0,4.0,5.0)\nmax([8,3,4,5])"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nmin(n,n{,n}...)\nmin(vector)\n```\n\nReturns the minimum of the parameters. If a single vector is given as parameter, returns the minimum element of that vector."
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nmin(3.0,5.0)\nmin(8.0,3.0,4.0,5.0)\nmin([8,3,4,5])\n```\n\nUsage example:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n3\n3\n3\n```\n\nmin(3.0,5.0)\nmin(8.0,3.0,4.0,5.0)\nmin([8,3,4,5])"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\na=[1,2,3,4];\nb=\"abcd\";\nc=[];\nd=\"\";\ne=[[1,2,3,4],[1,2,3],[1,2],[1]];\necho(norm(a)); //5.47723\necho(norm(b)); //undef\necho(norm(c)); //0\necho(norm(d)); //undef\necho(norm(e[0])); //5.47723\necho(norm(e[1])); //3.74166\necho(norm(e[2])); //2.23607\necho(norm(e[3])); //1\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nECHO: 5.47723\nECHO: undef\nECHO: 0\nECHO: undef\nECHO: 5.47723\nECHO: 3.74166\nECHO: 2.23607\nECHO: 1\n```\n\na=[1,2,3,4];\nb=\"abcd\";\nc=[];\nd=\"\";\ne=[[1,2,3,4],[1,2,3],[1,2],[1]];\necho(norm(a)); //5.47723\necho(norm(b)); //undef\necho(norm(c)); //0\necho(norm(d)); //undef\necho(norm(e[0])); //5.47723\necho(norm(e[1])); //3.74166\necho(norm(e[2])); //2.23607\necho(norm(e[3])); //1"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nfor (i = [0:5]) {\n translate([i*25,0,0]) {\n   cylinder(h = pow(2,i)*5, r=10);\n   echo (i, pow(2,i));\n }\n}\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\necho(pow(10,2)); // means 10^2 or 10*10\n// result: ECHO: 100\n\necho(pow(10,3)); // means 10^3 or 10*10*10\n// result: ECHO: 1000\n\necho(pow(125,1/3)); // means 125^(0.333...), which calculates the cube root of 125\n// result: ECHO: 5\n```\n\nfor (i = [0:5]) {\n translate([i*25,0,0]) {\n   cylinder(h = pow(2,i)*5, r=10);\n   echo (i, pow(2,i));\n }\n}"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n// get a single number\nsingle_rand = rands(0,10,1)[0];\necho(single_rand);\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n// get a vector of 4 numbers\nseed=42;\nrandom_vect=rands(5,15,4,seed);\necho( \"Random Vector: \",random_vect);\nsphere(r=5);\nfor(i=[0:3]) {\n rotate(360*i/4) {\n   translate([10+random_vect[i],0,0])\n     sphere(r=random_vect[i]/2);\n }\n}\n// ECHO: \"Random Vector: \", [8.7454, 12.9654, 14.5071, 6.83435]\n```\n\n// get a single number\nsingle_rand = rands(0,10,1)[0];\necho(single_rand);"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nround(5.4);\nround(5.5);\nround(5.6);\nround(-5.4);\nround(-5.5);\nround(-5.6);\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n5\n6\n6\n-5\n-6\n-6\n```\n\nround(5.4);\nround(5.5);\nround(5.6);\nround(-5.4);\nround(-5.5);\nround(-5.6);"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\nsign(-5.0);\nsign(0);\nsign(8.0);\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\n-1.0\n0.0\n1.0\n```\n\nsign(-5.0);\nsign(0);\nsign(8.0);"
+  },
+  {
+    "query": "Give me an example of mathematical functions in OpenSCAD",
+    "response": "Here's an example of mathematical functions in OpenSCAD:\n\n```scad\ntranslate([sqrt(100),0,0])sphere(100);\n```\n\nUsage example"
+  },
+  {
+    "query": "Give me an example of string functions in OpenSCAD",
+    "response": "Here's an example of string functions in OpenSCAD:\n\n```scad\nnumber=2;\necho (\"This is \",number,3,\" and that's it.\");\necho (str(\"This is \",number,3,\" and that's it.\"));\n```\n\nUsage examples:"
+  },
+  {
+    "query": "Give me an example of string functions in OpenSCAD",
+    "response": "Here's an example of string functions in OpenSCAD:\n\n```scad\nECHO: \"This is \", 2, 3, \" and that's it.\"\nECHO: \"This is 23 and that's it.\"\n```\n\nnumber=2;\necho (\"This is \",number,3,\" and that's it.\");\necho (str(\"This is \",number,3,\" and that's it.\"));"
+  },
+  {
+    "query": "Give me an example of string functions in OpenSCAD",
+    "response": "Here's an example of string functions in OpenSCAD:\n\n```scad\ns = str(n);\n```\n\nThis can be used for simple conversion of numbers to strings"
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nfunction name ( parameters ) = value ;\n```\n\nfunction definition"
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nfunction (x) x + x\n```\n\nfunction literal"
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nfunc = function (x) x * x;\necho(func(5)); // ECHO: 25\n```\n\nFunction literals can be assigned to variables and passed around like any value. Calling the function uses the normal function call syntax with parenthesis."
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\na = 1;\nselector = function (which)\n             which == \"add\"\n             ? function (x) x + x + a\n             : function (x) x * x + a;\n             \necho(selector(\"add\"));     // ECHO: function(x) ((x + x) + a)\necho(selector(\"add\")(5));  // ECHO: 11\n\necho(selector(\"mul\"));     // ECHO: function(x) ((x * x) + a)\necho(selector(\"mul\")(5));  // ECHO: 26\n```\n\nIt's possible to define functions that return functions. Unbound variables are captured by lexical scope."
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nmodule name ( parameters ) { actions }\n```\n\nmodule definition"
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nname ( parameter values );\n```\n\nIn use, object modules are actions ending with a semi-colon ';'."
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nname ( parameter values ){scope of operator}\n```\n\nUse of children() allows modules to act as operators applied to any or all of the objects within this module instantiation. \nIn use, operator modules do not end with a semi-colon."
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nmodule myModification() { rotate([0,45,0]) children(); } \n \n myModification()                 // The modification\n {                                // Begin focus\n   cylinder(10,4,4);              // First child\n   cube([20,2,2], true);          // Second child\n }                                // End focus\n```\n\nBasicly the children() command is used to apply modifications to objects that are focused by a scope:"
+  },
+  {
+    "query": "Give me an example of user defined functions in OpenSCAD",
+    "response": "Here's an example of user defined functions in OpenSCAD:\n\n```scad\nchildren();                         all children\n children(index);                    value or variable to select one child\n children([start : step : end]);     select from start to end incremented by step\n children([start : end]);            step defaults to 1 or -1\n children([vector]);                 selection of several children\n```\n\nObjects are indexed via integers from 0 to $children-1. OpenSCAD sets $children to the total number of objects within the scope.\nObjects grouped into a sub scope are treated as one child. \nSee example of separate children below and Scope of variables. Note that children(), echo() and empty block statements (including ifs) count as $children objects, even if no geometry is present (as of v2017.12.23)."
+  },
+  {
+    "query": "Give me an example of list comprehensions in OpenSCAD",
+    "response": "Here's an example of list comprehensions in OpenSCAD:\n\n```scad\n[ list-definition expression ]\n```\n\nThe list comprehensions provide a flexible way to generate lists using the general syntax"
+  },
+  {
+    "query": "Give me an example of list comprehensions in OpenSCAD",
+    "response": "Here's an example of list comprehensions in OpenSCAD:\n\n```scad\nfunction f(a, b, ...) =\n    condition\n    ? concat([expr], f(nexta, nextb, ...))\n    : [];\n  f(inita, initb, ...)\n```\n\nThe recursive equivalent of this generator is"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nregular  = \"regular global\";\n$special = \"special global\";\nmodule show() echo(\"         in show    \", regular,\"   \", $special );\n\necho (\"         outside    \", regular,\"   \", $special );\n          // ECHO: \"         outside    \", \"regular global\", \"   \", \"special global\"\n  \nfor ( regular = [0:1] ){ echo(\"in regular loop     \", regular,\"   \", $special ); show();}\n          // ECHO: \"in regular loop     \", 0, \"   \", \"special global\"\n          // ECHO: \"         in show    \", \"regular global\", \"   \", \"special global\"\n          // ECHO: \"in regular loop     \", 1, \"   \", \"special global\"\n          // ECHO: \"         in show    \", \"regular global\", \"   \", \"special global\"\n\nfor ( $special = [5:6] ){ echo(\"in special loop     \", regular,\"   \", $special ); show();}\n          // ECHO: \"in special loop     \", \"regular global\", \"   \", 5\n          // ECHO: \"         in show    \", \"regular global\", \"   \", 5\n          // ECHO: \"in special loop     \", \"regular global\", \"   \", 6\n          // ECHO: \"         in show    \", \"regular global\", \"   \", 6\n\nshow();\n          // ECHO: \"         in show    \", \"regular global\", \"   \", \"special global\"\n```\n\nSpecial variables pass along their value from within the scope \n (see scope of variables)\nfrom which the module or function is called. \nThis means that special variables can potentially have a different value each time a module or function is called."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n$fn = $preview ? 32 : 64;\n```\n\nYou can also use two different values for preview and render"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nint get_fragments_from_r(double r, double fn, double fs, double fa)\n      {\n             if (r < GRID_FINE) return 3;\n             if (fn > 0.0) return (int)(fn >= 3 ? fn : 3);\n             return (int)ceil(fmax(fmin(360.0 / fa, r*2*M_PI / fs), 5));\n      }\n```\n\nThis is the C code that calculates the number of fragments in a circle:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\necho(n=($fn>0?($fn>=3?$fn:3):ceil(max(min(360/$fa,r*2*PI/$fs),5))),a_based=360/$fa,s_based=r*2*PI/$fs);\n```\n\nOr you can embed this OpenSCAD version in your code to work out what's going on, you need to set r= to your size"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n$fs = 0.01;\n      sphere(2);\n```\n\nYou can generate high resolution spheres by resetting the $fX values in\nthe instantiating module:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nsphere(2, $fs = 0.01);\n```\n\nor simply by passing the special variable as parameter:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nsphere(2, $fs = $fs * 0.01);\n```\n\nYou can even scale the special variable instead of resetting it:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nconvert -delay 10 -loop 0 *.png myimage.gif\n```\n\nIf \"Dump Pictures\" is checked, then images are created in the same directory as the .scad file. The exported PNG files can be turned into a gif via command line:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\ncube([10, 10, $vpr[0] / 10]);\n```\n\n$vpr shows rotation\n$vpt shows translation (i.e. won't be affected by rotate and zoom)\n$vpf shows the FOV (Field of View) of the view [Note: Requires version 2021.01]\n$vpd shows the camera distance [Note: Requires version 2015.03]"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n$vpr = [0, 0, $t * 360];\n```\n\nAll four variables are writable, but only assignments at the top-level of the main file has an effect on the viewport. [Note: Requires version 2015.03]"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n$fn = $preview ? 12 : 72;\nsphere(r = 1);\n```\n\nThis can, for example, be used to reduce detail during preview to save time, without losing detail in the final rendered result:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nrender(){\n    $fn = $preview ? 12 : 72;\n    sphere(r = 1);\n}\n```\n\nNote that the render module does not affect $preview:"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nECHO: \"This is a cylinder with h=\", 50, \" and r=\", 100\nECHO: my_h = 50, my_r = 100\n```\n\nShows in the Console as"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nECHO: 1\nECHO: 1\nECHO: \"a<b\"\n```\n\nShows in the Console as"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\na = 3; b = 5;\n \n // echo() prints values before evaluating the expression\n r1 = echo(a, b) a * b; // ECHO: 3, 5\n \n // using let it's still easy to output the result\n r2 = let(r = 2 * a * b) echo(r) r; // ECHO: 30\n \n // use echo statement for showing results \n echo(r1, r2); // ECHO: 15, 30\n```\n\nEcho can be used in expression context to print information while the function/expression is evaluated. The output is generated before the expression evaluation to allow debugging of recursive functions."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nv = [4, 7, 9, 12];\n function result(x) = echo(result = x) x;\n function sum(x, i = 0) = echo(str(\"x[\", i, \"]=\", x[i])) result(len(x) > i ? x[i] + sum(x, i + 1) : 0);\n echo(\"sum(v) = \", sum(v));\n \n // ECHO: \"x[0]=4\"\n // ECHO: \"x[1]=7\"\n // ECHO: \"x[2]=9\"\n // ECHO: \"x[3]=12\"\n // ECHO: \"x[4]=undef\"\n // ECHO: result = 0\n // ECHO: result = 12\n // ECHO: result = 21\n // ECHO: result = 28\n // ECHO: result = 32\n // ECHO: \"sum(v) = \", 32\n```\n\nExample printing both input values and result of recursive sum()"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nrender(convexity = 2) difference() {\n cube([20, 20, 150], center = true);\n translate([-10, -10, 0])\n  cylinder(h = 80, r = 10, center = true);\n translate([-10, -10, +40])\n  sphere(r = 10);\n translate([-10, -10, -40])\n  sphere(r = 10);\n}\n```\n\nUsage examples: (Needs description)"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n#surface.dat\n10 9 8 7 6 5 5 5 5 5 \n9 8 7 6 6 4 3 2 1 0 \n8 7 6 6 4 3 2 1 0 0\n7 6 6 4 3 2 1 0 0 0\n6 6 4 3 2 1 1 0 0 0\n6 6 3 2 1 1 1 0 0 0\n6 6 2 1 1 1 1 0 0 0\n6 6 1 0 0 0 0 0 0 0\n3 1 0 0 0 0 0 0 0 0\n3 0 0 0 0 0 0 0 0 0\n```\n\n//surface.scad\nsurface(file = \"surface.dat\", center = true, convexity = 5);\n%translate([0,0,5])cube([10,10,10], center = true);"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n//original surface\nsurface(file = \"example010.dat\", center = true, convexity = 5);\n//rotated surface\ntranslate(v = [70, 0, 0]) rotate(45, [0, 0, 1]) surface(file = \"example010.dat\", center = true, convexity = 5);\n\n//intersection\ntranslate(v = [35, 60, 0])\nintersection() {\n    surface(file = \"example010.dat\", center = true, convexity = 5);\n    rotate(45, [0, 0, 1]) surface(file = \"example010.dat\", center = true, convexity = 5);\n}\n```\n\n// example010.dat generated using octave or matlab:\nd = (sin(1:0.2:10)' * cos(1:0.2:10)) * 10;\nsave(\"-ascii\", \"example010.dat\", \"d\");"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n// Example 3a\nscale([1, 1, 0.1])\n  surface(file = \"smiley.png\", center = true);\n```\n\n[Note: Requires version 2015.03]"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n// Example 3b\nscale([1, 1, 0.1])\n  surface(file = \"smiley.png\", center = true, invert = true);\n```\n\n// Example 3a\nscale([1, 1, 0.1])\n  surface(file = \"smiley.png\", center = true);"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n// Example 4\nsurface(file = \"BRGY-Grey.png\", center = true, invert = false);\n```\n\n[Note: Requires version 2015.03]"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nECHO: []\n ECHO: [2, 8]\n```\n\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",3] ];\n echo(search(3, data));    // Searches index 0, so it doesn't find anything\n echo(search(3, data, num_returns_per_match=0, index_col_num=1));"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abc\", data, num_returns_per_match=0);\n```\n\nExample 6:  Return all matches per search vector element."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n[[0,4],[1,5],[2,6]]\n```\n\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abc\", data, num_returns_per_match=0);"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abc\", data, num_returns_per_match=1);\n```\n\nExample 7:  Return first match per search vector element; special case return vector."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n[0,1,2]\n```\n\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abc\", data, num_returns_per_match=1);"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abce\", data, num_returns_per_match=2);\n```\n\nExample 8:  Return first two matches per search vector element; vector of vectors."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\n[[0,4],[1,5],[2,6],[8]]\n```\n\ndata= [ [\"a\",1],[\"b\",2],[\"c\",3],[\"d\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9] ];\n search(\"abce\", data, num_returns_per_match=2);"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nECHO: \"Default list string search ([\"b\", \"zzz\", \"a\", \"c\", \"apple\", \"dog\"]): [1, [], 4, 2, 9, 3]\"\n```\n\nlTable2=[ [\"cat\",1],[\"b\",2],[\"c\",3],[\"dog\",4],[\"a\",5],[\"b\",6],[\"c\",7],[\"d\",8],[\"e\",9],[\"apple\",10],[\"a\",11] ];\n lSearch2=[\"b\",\"zzz\",\"a\",\"c\",\"apple\",\"dog\"];\n l2=search(lSearch2,lTable2);\n echo(str(\"Default list string search (\",lSearch2,\"): \",l2));"
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nmodule top() {\n   children();\n }\n module middle() {\n   children();\n }\n top() middle() echo(parent_module(0)); // prints \"middle\"\n top() middle() echo(parent_module(1)); // prints \"top\"\n```\n\n$parent_modules contains the number of modules in the instantiation stack.\nparent_module(i) returns the name of the module i levels above the current module in the instantiation stack.\nThe stack is independent of where the modules are defined. It's where they're instantiated that counts.\nThis can, for example, be used to build a BOM (Bill Of Material)."
+  },
+  {
+    "query": "Give me an example of other language features in OpenSCAD",
+    "response": "Here's an example of other language features in OpenSCAD:\n\n```scad\nassert(condition);\n assert(condition, message);\n```\n\nAssert evaluates a logical expression. If the expression evaluates to false, the generation of the preview/render is stopped, and an error condition is reported via the console.  The report consists of a string representation of the expression and an additional string (optional) that is specified in the assert command."
+  }
+]

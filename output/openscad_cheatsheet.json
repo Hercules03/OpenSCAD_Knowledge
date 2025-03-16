@@ -1,0 +1,367 @@
+{
+  "syntax": [
+    {
+      "name": "var = value;",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "var",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+        },
+        {
+          "text": "value",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types"
+        }
+      ]
+    },
+    {
+      "name": "var = cond ? value_if_true : value_if_false;",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "var",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+        },
+        {
+          "text": "?",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:"
+        },
+        {
+          "text": ":",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:"
+        }
+      ]
+    },
+    {
+      "name": "var = function (x) x + x;",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "var",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables"
+        },
+        {
+          "text": "function",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals"
+        }
+      ]
+    },
+    {
+      "name": "module name(…) { … }\n        name();",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "module",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules"
+        }
+      ]
+    },
+    {
+      "name": "function name(…) = …\n        name();",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "function",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions"
+        }
+      ]
+    },
+    {
+      "name": "include <….scad>",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "include",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement"
+        }
+      ]
+    },
+    {
+      "name": "use <….scad>",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "use",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement"
+        }
+      ]
+    },
+    {
+      "name": "undef",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "undef",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#The_Undefined_Value"
+        }
+      ]
+    },
+    {
+      "name": "PI",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "PI",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Numbers"
+        }
+      ]
+    },
+    {
+      "name": "n + m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n + m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n - m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n - m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n * m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n * m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n / m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n / m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n % m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n % m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n ^ m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n ^ m",
+          "href": "https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n < m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n < m",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n <= m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n <= m",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "b == c",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "b == c",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "b != c",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "b != c",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n >= m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n >= m",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "n > m",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "n > m",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators"
+        }
+      ]
+    },
+    {
+      "name": "b && c",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "b && c",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "b || c",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "b || c",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "!b",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "!b",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators"
+        }
+      ]
+    },
+    {
+      "name": "$fa",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$fa",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fa"
+        }
+      ]
+    },
+    {
+      "name": "$fs",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$fs",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fs"
+        }
+      ]
+    },
+    {
+      "name": "$fn",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$fn",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fn"
+        }
+      ]
+    },
+    {
+      "name": "$t",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$t",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$t"
+        }
+      ]
+    },
+    {
+      "name": "$vpr",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$vpr",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpr"
+        }
+      ]
+    },
+    {
+      "name": "$vpt",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$vpt",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpt"
+        }
+      ]
+    },
+    {
+      "name": "$vpd",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$vpd",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpd"
+        }
+      ]
+    },
+    {
+      "name": "$vpf",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$vpf",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpf"
+        }
+      ]
+    },
+    {
+      "name": "$children",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$children",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Children"
+        }
+      ]
+    },
+    {
+      "name": "$preview",
+      "description": "Syntax element",
+      "links": [
+        {
+          "text": "$preview",
+          "href": "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$preview"
+        }
+      ]
+    }
+  ],
+  "primitives2D": [],
+  "primitives3D": [],
+  "transformations": [],
+  "operators": [],
+  "mathFunctions": [],
+  "specialVariables": [],
+  "otherFunctions": []
+}

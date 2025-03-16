@@ -1,0 +1,52 @@
+{
+  "missingSections": [
+    {
+      "name": "Matrix",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Objects",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Retrieving a value from an object",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Iterating over object members",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Getting input",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Vector operators",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "concat",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "len",
+      "parentSection": "general",
+      "printContent": null
+    },
+    {
+      "name": "Special variables",
+      "parentSection": "general",
+      "printContent": null
+    }
+  ],
+  "incompleteContent": [],
+  "missingCodeExamples": [],
+  "supplementaryContent": {}
+}
