@@ -1,0 +1,166 @@
+import os
+import json
+import argparse
+from collections import defaultdict
+import random
+
+# Configure argument parser
+parser = argparse.ArgumentParser(description='Generate balanced training examples from OpenSCAD documentation and books')
+parser.add_argument('--doc-path', help='Path to scraped documentation examples')
+parser.add_argument('--book-path', help='Path to book content examples directory')
+parser.add_argument('--output', help='Output file for combined training examples', default='combined_training_examples.json')
+parser.add_argument('--validation-split', type=float, default=0.1, help='Percentage of examples to use for validation')
+parser.add_argument('--max-examples', type=int, default=0, help='Maximum examples per category (0 = no limit)')
+parser.add_argument('--deduplicate', action='store_true', help='Remove similar examples')
+args = parser.parse_args()
+
+def load_examples(file_path):
+    """Load examples from a JSON file"""
+    if not os.path.exists(file_path):
+        print(f"Warning: File not found: {file_path}")
+        return []
+        
+    with open(file_path, 'r', encoding='utf-8') as f:
+        try:
+            examples = json.load(f)
+            print(f"Loaded {len(examples)} examples from {file_path}")
+            return examples
+        except json.JSONDecodeError:
+            print(f"Error: {file_path} is not valid JSON")
+            return []
+
+def categorize_example(example):
+    """Assign a category to an example based on its query"""
+    query = example['query'].lower()
+    
+    # Define category patterns
+    categories = {
+        'explanation': ['explain', 'what is', 'what are', 'describe', 'tell me about'],
+        'how_to': ['how do i', 'how to', 'how can i', 'steps to'],
+        'code_example': ['example of', 'code for', 'show me', 'syntax for'],
+        'problem_solving': ['troubleshoot', 'problem with', 'issue', 'error', 'debug', 'fix'],
+        'comparison': ['difference between', 'compare', 'versus', 'vs'],
+        'project': ['project', 'tutorial', 'walkthrough', 'guide', 'create a'],
+        'python_integration': ['python', 'script']
+    }
+    
+    # Check each category pattern
+    for category, patterns in categories.items():
+        if any(pattern in query for pattern in patterns):
+            return category
+    
+    # Default category
+    return 'general'
+
+def deduplicate_examples(examples, threshold=0.7):
+    """Remove similar examples based on response similarity"""
+    print(f"Deduplicating {len(examples)} examples...")
+    unique_examples = []
+    seen_responses = {}
+    
+    # Helper function to get content fingerprint
+    def get_fingerprint(text):
+        # Simplify the text to its core content for comparison
+        # Remove whitespace, lowercase, and keep only first 100 chars
+        return ' '.join(text.lower().split())[:100]
+    
+    # Helper function to check similarity
+    def is_similar(text1, text2):
+        # Simple method: check if one is a substring of another
+        return text1 in text2 or text2 in text1
+    
+    for example in examples:
+        fingerprint = get_fingerprint(example['response'])
+        is_duplicate = False
+        
+        # Check against seen responses
+        for seen_fp in seen_responses:
+            if is_similar(fingerprint, seen_fp):
+                is_duplicate = True
+                # Add this query as an alternative
+                seen_responses[seen_fp].append(example['query'])
+                break
+        
+        if not is_duplicate:
+            unique_examples.append(example)
+            seen_responses[fingerprint] = [example['query']]
+    
+    print(f"Deduplicated to {len(unique_examples)} examples")
+    return unique_examples
+
+def balance_examples(examples, max_per_category=0):
+    """Balance examples across categories"""
+    categorized = defaultdict(list)
+    
+    # Categorize all examples
+    for example in examples:
+        category = categorize_example(example)
+        categorized[category].append(example)
+    
+    # Display category statistics
+    print("\nCategory distribution:")
+    for category, items in categorized.items():
+        print(f"  {category}: {len(items)} examples")
+    
+    # Balance if max_per_category is set
+    balanced_examples = []
+    if max_per_category > 0:
+        print(f"\nBalancing to max {max_per_category} examples per category")
+        for category, items in categorized.items():
+            # Shuffle to get a random subset if we need to reduce
+            random.shuffle(items)
+            balanced_examples.extend(items[:max_per_category])
+        print(f"Balanced to {len(balanced_examples)} examples")
+    else:
+        balanced_examples = examples
+    
+    return balanced_examples
+
+def combine_examples(doc_examples, book_examples):
+    """Combine documentation and book examples"""
+    combined = []
+    
+    # Process documentation examples
+    for example in doc_examples:
+        # Add source tag
+        if 'source' not in example:
+            example['source'] = 'documentation'
+        combined.append(example)
+    
+    # Process book examples
+    for example in book_examples:
+        # Add source tag
+        if 'source' not in example:
+            example['source'] = 'book'
+        combined.append(example)
+    
+    print(f"Combined {len(doc_examples)} doc examples and {len(book_examples)} book examples = {len(combined)} total")
+    return combined
+
+def split_train_validation(examples, validation_pct=0.1):
+    """Split examples into training and validation sets"""
+    # Shuffle the examples
+    random.shuffle(examples)
+    
+    # Calculate the split
+    val_count = int(len(examples) * validation_pct)
+    
+    # Split the examples
+    validation = examples[:val_count]
+    training = examples[val_count:]
+    
+    print(f"Split into {len(training)} training examples and {len(validation)} validation examples")
+    return training, validation
+
+def enhance_examples(examples):
+    """Enhance examples with additional metadata"""
+    for example in examples:
+        # Add difficulty level based on query complexity and response length
+        query = example['query'].lower()
+        response_length = len(example['response'])
+        
+        if ('simple' in query or 'basic' in query) and response_length < 500:
+            example['difficulty'] = 'beginner'
+        elif ('advanced' in query or 'complex' in query) or response_length > 1500:
+            example['difficulty'] = 'advanced'
+        else:
